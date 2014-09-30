@@ -1,6 +1,6 @@
 //
 //  MBListenerManager.m
-//  Mockingbird Library
+//  Mockingbird Event Handling
 //
 //  Created by Evan Coyne Maloney on 8/21/12.
 //  Copyright (c) 2012 Gilt Groupe. All rights reserved.

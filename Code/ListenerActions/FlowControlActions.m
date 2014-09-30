@@ -1,6 +1,6 @@
 //
 //  FlowControlActions.m
-//  Mockingbird Library
+//  Mockingbird Event Handling
 //
 //  Created by Evan Coyne Maloney on 2/24/14.
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.

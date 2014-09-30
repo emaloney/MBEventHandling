@@ -1,6 +1,6 @@
 //
 //  Mockingbird-EventHandling.h
-//  Mockingbird Data Environment
+//  Mockingbird Event Handling
 //
 //  Created by Evan Coyne Maloney on 3/18/14.
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.

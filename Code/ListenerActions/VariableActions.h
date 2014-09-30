@@ -1,6 +1,6 @@
 //
 //  VariableActions.h
-//  Mockingbird Library
+//  Mockingbird Event Handling
 //
 //  Created by Evan Coyne Maloney on 6/27/13.
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  MBDataFilter.m
-//  Mockingbird Library
+//  Mockingbird Event Handling
 //
 //  Created by Jesse Boyes on 8/15/09.
 //  Copyright (c) 2009 Gilt Groupe. All rights reserved.
