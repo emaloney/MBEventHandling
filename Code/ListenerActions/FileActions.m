@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import "Mockingbird-EventHandling.h"
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "FileActions.h"
 

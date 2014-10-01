@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
-#import <MBToolbox/NSString+MBIndentation.h>
+#import <MBToolbox/MBToolbox.h>
 
 #import "FlowControlActions.h"
 #import "MBEventHandlingConstants.h"

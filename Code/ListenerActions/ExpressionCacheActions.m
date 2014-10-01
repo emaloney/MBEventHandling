@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import <MBDataEnvironment/MBExpressionCache.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "ExpressionCacheActions.h"
 

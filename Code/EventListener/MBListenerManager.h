@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Gilt Groupe. All rights reserved.
 //
 
-#import <MBDataEnvironment/Mockingbird-DataEnvironment.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 @class MBEventListener;
 

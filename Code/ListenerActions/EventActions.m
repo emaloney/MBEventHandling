@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import <MBDataEnvironment/MBScopedVariables.h>
-#import <MBToolbox/MBEvents.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "EventActions.h"
 #import "MBEventHandlingConstants.h"

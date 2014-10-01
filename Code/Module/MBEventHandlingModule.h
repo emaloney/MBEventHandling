@@ -1,5 +1,5 @@
 //
-//  MBEventHandling.h
+//  MBEventHandlingModule.h
 //  Mockingbird Event Handling
 //
 //  Created by Evan Coyne Maloney on 7/30/14.
@@ -14,8 +14,8 @@
 
 /******************************************************************************/
 #pragma mark -
-#pragma mark MBEventHandling class
+#pragma mark MBEventHandlingModule class
 /******************************************************************************/
 
-@interface MBEventHandling : MBModuleBase
+@interface MBEventHandlingModule : MBModuleBase
 @end

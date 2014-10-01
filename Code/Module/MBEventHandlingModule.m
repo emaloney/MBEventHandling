@@ -1,21 +1,21 @@
 //
-//  MBEventHandling.m
+//  MBEventHandlingModule.m
 //  Mockingbird Event Handling
 //
 //  Created by Evan Coyne Maloney on 7/30/14.
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
-#import "MBEventHandling.h"
+#import "MBEventHandlingModule.h"
 
 #define DEBUG_LOCAL     0
 
 /******************************************************************************/
 #pragma mark -
-#pragma mark MBEventHandling implementation
+#pragma mark MBEventHandlingModule implementation
 /******************************************************************************/
 
-@implementation MBEventHandling
+@implementation MBEventHandlingModule
 
 + (NSArray*) environmentLoaderClasses
 {

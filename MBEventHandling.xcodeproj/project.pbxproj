@@ -19,7 +19,7 @@
 		3B8BA89C19DB07C500996B9F /* FlowControlActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88819DB07C500996B9F /* FlowControlActions.m */; };
 		3B8BA89D19DB07C500996B9F /* ServiceActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88A19DB07C500996B9F /* ServiceActions.m */; };
 		3B8BA89E19DB07C500996B9F /* VariableActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88C19DB07C500996B9F /* VariableActions.m */; };
-		3B8BA89F19DB07C500996B9F /* MBEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA89019DB07C500996B9F /* MBEventHandling.m */; };
+		3B8BA89F19DB07C500996B9F /* MBEventHandlingModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA89019DB07C500996B9F /* MBEventHandlingModule.m */; };
 		3B8BA8A019DB07C500996B9F /* MBEventHandlingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */; };
 		DDEA9261E68A66A6348FDC13 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFAC8CB1406BA5D81650101 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -64,9 +64,9 @@
 		3B8BA88A19DB07C500996B9F /* ServiceActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceActions.m; sourceTree = "<group>"; };
 		3B8BA88B19DB07C500996B9F /* VariableActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableActions.h; sourceTree = "<group>"; };
 		3B8BA88C19DB07C500996B9F /* VariableActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VariableActions.m; sourceTree = "<group>"; };
-		3B8BA88D19DB07C500996B9F /* Mockingbird-EventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Mockingbird-EventHandling.h"; sourceTree = "<group>"; };
-		3B8BA88F19DB07C500996B9F /* MBEventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandling.h; sourceTree = "<group>"; };
-		3B8BA89019DB07C500996B9F /* MBEventHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandling.m; sourceTree = "<group>"; };
+		3B8BA88D19DB07C500996B9F /* MBEventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandling.h; sourceTree = "<group>"; };
+		3B8BA88F19DB07C500996B9F /* MBEventHandlingModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandlingModule.h; sourceTree = "<group>"; };
+		3B8BA89019DB07C500996B9F /* MBEventHandlingModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingModule.m; sourceTree = "<group>"; };
 		3B8BA89119DB07C500996B9F /* MBEventHandlingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandlingConstants.h; sourceTree = "<group>"; };
 		3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingConstants.m; sourceTree = "<group>"; };
 		4DEB2283DDF454AB8A00BE5F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				3B8BA87219DB07C500996B9F /* DataFilter */,
 				3B8BA87919DB07C500996B9F /* EventListener */,
 				3B8BA87E19DB07C500996B9F /* ListenerActions */,
-				3B8BA88D19DB07C500996B9F /* Mockingbird-EventHandling.h */,
+				3B8BA88D19DB07C500996B9F /* MBEventHandling.h */,
 				3B8BA88E19DB07C500996B9F /* Module */,
 			);
 			path = Code;
@@ -179,8 +179,8 @@
 		3B8BA88E19DB07C500996B9F /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				3B8BA88F19DB07C500996B9F /* MBEventHandling.h */,
-				3B8BA89019DB07C500996B9F /* MBEventHandling.m */,
+				3B8BA88F19DB07C500996B9F /* MBEventHandlingModule.h */,
+				3B8BA89019DB07C500996B9F /* MBEventHandlingModule.m */,
 				3B8BA89119DB07C500996B9F /* MBEventHandlingConstants.h */,
 				3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */,
 			);
@@ -283,7 +283,7 @@
 				3B8BA89419DB07C500996B9F /* MBFilterDataAction.m in Sources */,
 				3B8BA89E19DB07C500996B9F /* VariableActions.m in Sources */,
 				3B8BA8A019DB07C500996B9F /* MBEventHandlingConstants.m in Sources */,
-				3B8BA89F19DB07C500996B9F /* MBEventHandling.m in Sources */,
+				3B8BA89F19DB07C500996B9F /* MBEventHandlingModule.m in Sources */,
 				3B8BA89B19DB07C500996B9F /* FileActions.m in Sources */,
 				3B8BA89C19DB07C500996B9F /* FlowControlActions.m in Sources */,
 				3B8BA89719DB07C500996B9F /* MBListenerManager.m in Sources */,

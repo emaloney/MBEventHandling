@@ -7,11 +7,10 @@
 //
 
 #import <RaptureXML@Gilt/RXMLElement.h>
-#import <MBDataEnvironment/MBEvents+DataLoading.h>
-#import <MBDataEnvironment/Mockingbird-DataEnvironment.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "MBDataFilter.h"
-#import "MBEventHandling.h"
+#import "MBEventHandlingModule.h"
 
 #define DEBUG_LOCAL		0
 
@@ -75,7 +74,7 @@
     }
 
     if ([self valueOfAttribute:@"filterClass"]) {
-        [[MBEventHandling log] issueNotSupportedErrorWithFormat:@"DataFilters no longer support custom filter classes. Filters specifying the filterClass attribute will not be executed. This filter will be ignored: %@", self.simulatedXML];
+        [[MBEventHandlingModule log] issueNotSupportedErrorWithFormat:@"DataFilters no longer support custom filter classes. Filters specifying the filterClass attribute will not be executed. This filter will be ignored: %@", self.simulatedXML];
         return NO;
     }
     

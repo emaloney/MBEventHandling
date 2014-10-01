@@ -7,11 +7,7 @@
 //
 
 #import <RaptureXML@Gilt/RXMLElement.h>
-#import <MBToolbox/NSString+MBIndentation.h>
-#import <MBDataEnvironment/MBScopedVariables.h>
-#import <MBDataEnvironment/MBExpression.h>
-#import <MBDataEnvironment/MBVariableSpace.h>
-#import <MBDataEnvironment/MBEnvironment.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "MBEventListener.h"
 #import "FlowControlActions.h"

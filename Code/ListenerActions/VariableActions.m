@@ -6,9 +6,7 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import <MBDataEnvironment/MBAttributeValidator.h>
-#import <MBDataEnvironment/MBVariableSpace.h>
-#import <MBDataEnvironment/MBScopedVariables.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "VariableActions.h"
 #import "MBEventHandlingConstants.h"

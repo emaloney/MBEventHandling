@@ -6,9 +6,7 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import <MBDataEnvironment/MBEnvironment.h>
-#import <MBDataEnvironment/MBDataEnvironmentConstants.h>
-#import <MBDataEnvironment/MBVariableSpace.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "EnvironmentActions.h"
 #import "MBEventHandlingConstants.h"

@@ -7,12 +7,11 @@
 //
 
 #import <RaptureXML@Gilt/RXMLElement.h>
-#import <MBToolbox/NSString+MBIndentation.h>
-#import <MBDataEnvironment/MBEnvironment.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "MBListenerManager.h"
-#import "Mockingbird-EventHandling.h"
 #import "MBEventListener.h"
+#import "MBEventHandlingConstants.h"
 
 #define DEBUG_LOCAL         0
 #define DEBUG_VERBOSE       0

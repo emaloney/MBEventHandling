@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
-#import <MBDataEnvironment/MBEnvironmentLoader.h>
-#import <MBToolbox/MBSingleton.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 @class MBDataFilter;
 

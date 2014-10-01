@@ -7,11 +7,11 @@
 //
 
 #import <RaptureXML@Gilt/RXMLElement.h>
-#import <MBDataEnvironment/MBEnvironment.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "MBFilterManager.h"
 #import "MBDataFilter.h"
-#import "MBEventHandling.h"
+#import "MBEventHandlingModule.h"
 
 #define DEBUG_LOCAL         0
 #define DEBUG_VERBOSE       0
