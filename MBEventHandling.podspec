@@ -28,6 +28,8 @@ Pod::Spec.new do |s|
 	s.source_files			= 'Code/**/*.{h,m}'
 	s.public_header_files	= 'Code/**/*.h'
 
+	s.xcconfig				= { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+
 	#----------------------------------------------------------------
 	# Dependencies
 	#----------------------------------------------------------------
