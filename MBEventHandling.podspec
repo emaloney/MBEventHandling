@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBEventHandling"
-	s.version               = "0.9.0"
+	s.version               = "0.9.1"
 	s.summary               = "Mockingbird Event Handling Extensions"
 	s.description			= "Provides a mechanism for performing runtime actions in response to NSNotification events."
 	s.homepage         	    = "https://github.com/gilt/MBEventHandling"
