@@ -10,10 +10,10 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBEventHandling"
-	s.version               = "0.9.4"
+	s.version               = "0.9.5"
 	s.summary               = "Mockingbird Event Handling Extensions"
-	s.description			= "Provides a mechanism for performing runtime actions in response to NSNotification events."
-	s.homepage         	    = "https://github.com/gilt/MBEventHandling"
+	s.description		= "Provides a mechanism for performing runtime actions in response to NSNotification events."
+	s.homepage		= "https://github.com/gilt/MBEventHandling"
 	s.license               = { :type => 'MIT', :file => 'LICENSE' }
 	s.author                = { "Evan Coyne Maloney" => "emaloney@gilt.com" }
 	s.platform              = :ios, '8.0'
@@ -25,15 +25,15 @@ Pod::Spec.new do |s|
 		:tag => s.version.to_s
 	}
 
-	s.source_files			= 'Code/**/*.{h,m}'
+	s.source_files		= 'Code/**/*.{h,m}'
 	s.public_header_files	= 'Code/**/*.h'
 
-	s.xcconfig				= { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+	s.xcconfig		= { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
 
 	#----------------------------------------------------------------
 	# Dependencies
 	#----------------------------------------------------------------
 
-	s.dependency 'MBDataEnvironment', '~> 0.9.6'
+	s.dependency 'MBDataEnvironment', '~> 0.9.8'
 
 end
