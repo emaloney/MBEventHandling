@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 	s.version               = "0.9.6"
 	s.summary               = "Mockingbird Event Handling Extensions"
 	s.description		= "Provides a mechanism for performing runtime actions in response to NSNotification events."
-	s.homepage		= "https://github.com/gilt/MBEventHandling"
+	s.homepage		= "https://github.com/emaloney/MBEventHandling"
 	s.license               = { :type => 'MIT', :file => 'LICENSE' }
 	s.author                = { "Evan Coyne Maloney" => "emaloney@gilt.com" }
 	s.platform              = :ios, '8.0'
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 	s.requires_arc          = true
 
 	s.source = {
-		:git => 'https://github.com/gilt/MBEventHandling.git',
+		:git => 'https://github.com/emaloney/MBEventHandling.git',
 		:tag => s.version.to_s
 	}
 
