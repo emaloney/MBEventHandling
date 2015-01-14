@@ -86,7 +86,7 @@
     NSString* file = [self evaluateAsString:kMBMLAttributeFile];
     if (file) {
         if (![env mbmlFileIsLoaded:file] || [self evaluateAsBoolean:kMBMLAttributeForceReload]) {
-            if (![env loadTemplateFile:file]) {
+            if (![env loadMBMLFile:file]) {
                 errorLog(@"The <%@> action failed to load %@ for: %@", self.xmlTagName, file, self.simulatedXML);
             }
         }
