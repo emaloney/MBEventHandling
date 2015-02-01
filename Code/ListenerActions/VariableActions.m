@@ -209,7 +209,7 @@
     else {
         if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
-        [[MBVariableSpace instance] setVariable:varName value:value];
+        [MBVariableSpace instance][varName] = value;
     }   
 }
 
@@ -232,7 +232,7 @@
 
     if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
-    [[MBScopedVariables currentVariableScope] setScopedVariable:varName value:value];
+    [MBScopedVariables currentVariableScope][varName] = value;
 }
 
 @end
@@ -254,7 +254,7 @@
 
     if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
-    [[MBScopedVariables currentVariableScope] setScopedVariable:varName value:value];
+    [MBScopedVariables currentVariableScope][varName] = value;
 }
 
 @end
@@ -342,7 +342,7 @@
 
     if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
-    [[MBVariableSpace instance] setVariable:varName value:value];
+    [MBVariableSpace instance][varName] = value;
 }
 
 @end

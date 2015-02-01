@@ -61,7 +61,7 @@
                 if (!scope) {
                     scope = [MBScopedVariables new];
                 }
-                [scope setScopedVariable:attrName value:[self evaluateAsObject:attrName]];
+                scope[attrName] = [self evaluateAsObject:attrName];
             }
         }
     }

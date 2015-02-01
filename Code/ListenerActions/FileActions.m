@@ -56,7 +56,7 @@
                 varValue = [[NSString alloc] initWithData:fileData encoding:NSUTF8StringEncoding];
             }
             
-            [[MBVariableSpace instance] setVariable:var value:varValue];
+            [MBVariableSpace instance][var] = varValue;
         }
         else {
             errorLog(@"%@ failed to load %@; error: %@", [self class], filePath, err);
@@ -96,7 +96,7 @@
     if (filePath && var) {
         NSError* err = nil;
         
-        id value = [[MBVariableSpace instance] variableForName:var];
+        id value = [MBVariableSpace instance][var];
         if (!value) {
             errorLog(@"Was asked to write the MBML variable %@ to file %@, but the variable is currently nil", var, filePath);
         }

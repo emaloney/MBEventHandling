@@ -283,7 +283,7 @@
             } 
         }
         
-        [[MBVariableSpace instance] setVariable:varName value:value];
+        [MBVariableSpace instance][varName] = value;
     }
     else {
         [[MBVariableSpace instance] unsetVariable:varName];

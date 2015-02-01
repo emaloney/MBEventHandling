@@ -132,7 +132,7 @@
             errorLog(@"The <%@> could not interpret the value of the %@ attribute (\"%@\" from expression: \"%@\") as a valid URL", self.xmlTagName, kMBMLAttributeURL, [self evaluateAsString:kMBMLAttributeURL], self[kMBMLAttributeURL]);
         }
         NSString* varValue = [MBExpression stringFromBoolean:canOpen];
-        [[MBVariableSpace instance] setVariable:var value:varValue];
+        [MBVariableSpace instance][var] = varValue;
     }
 }
 

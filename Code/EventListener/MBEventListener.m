@@ -96,7 +96,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     if ([self evaluateAsBoolean:kMBMLAttributeTrace])
         _traceExecution = YES;
 
-    if ([MBExpression booleanFromValue:[[MBVariableSpace instance] variableForName:kMBEventListenerTraceActionsVariable]])
+    if ([MBExpression booleanFromValue:[MBVariableSpace instance][kMBEventListenerTraceActionsVariable]])
         _traceExecution = YES;
 
     return _traceExecution;
@@ -423,7 +423,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     BOOL ignoring = NO;
     MBScopedVariables* scope = [MBScopedVariables enterVariableScope];
     @try {
-        [scope setScopedVariable:kMBEventListenerNotificationVariable value:event];
+        scope[kMBEventListenerNotificationVariable] = event;
 
         // this check should always happen within the event's MBML
         // variable scope, so the listener's if="..." clause can
