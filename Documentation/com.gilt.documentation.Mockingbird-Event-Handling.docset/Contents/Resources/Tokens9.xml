@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBDataFilter.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBDataFilter</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MBDataFilter.h</DeclaredIn>
+            
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBDataFilter/setName:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MBDataFilter.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MBMLAttribute NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBDataFilter/name</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MBDataFilter.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MBMLAttribute NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBDataFilter/name</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MBDataFilter.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) MBMLAttribute NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBDataFilter/refreshData</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MBDataFilter.h</DeclaredIn>
+			
+			<Declaration>- (void)refreshData</Declaration>
+			
+			
+			<Anchor>//api/name/refreshData</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBDetachServiceAction.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBDetachServiceAction</TokenIdentifier>
+			<Abstract type="html">A listener action that, when executed, detaches from a runtime service.</Abstract>
+			<DeclaredIn>ServiceActions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

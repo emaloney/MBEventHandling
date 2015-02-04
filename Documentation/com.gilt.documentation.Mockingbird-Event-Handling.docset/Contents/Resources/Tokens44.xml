@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBWhenAction.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBWhenAction</TokenIdentifier>
+			<Abstract type="html">An action that contains other actions and conditionally executes them
+when a given condition evaluates to true.</Abstract>
+			<DeclaredIn>FlowControlActions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="44"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

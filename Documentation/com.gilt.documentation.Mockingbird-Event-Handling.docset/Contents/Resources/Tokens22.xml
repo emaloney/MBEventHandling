@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBListenerAction.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBListenerAction</TokenIdentifier>
+			<Abstract type="html">Provides a low-level API for performing actions in response to events received
+by listeners.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+            
+			
+			<NodeRef refid="22"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBListenerAction/acceptsTextContent</TokenIdentifier>
+			<Abstract type="html">Indicates whether the action accepts text content within its XML tags.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)acceptsTextContent</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if text content is accepted; NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/acceptsTextContent</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBListenerAction/acceptsArbitraryAttributes</TokenIdentifier>
+			<Abstract type="html">Indicates whether the action accepts an arbitrary set of attributes. Default
+implementation returns NO. If YES, attribute validation will not occur and
+arbitrary events will be accepted without issuing console warnings.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)acceptsArbitraryAttributes</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the listener accepts arbitrary attributes; NO otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/acceptsArbitraryAttributes</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBListenerAction/ignoresNonstandardAttributes</TokenIdentifier>
+			<Abstract type="html">Indicates whether the action ignores nonstandard attributes (i.e., those other
+than &quot;if&quot;, &quot;afterDelay&quot; and &quot;warnOnOverwrite&quot;.)</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)ignoresNonstandardAttributes</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if the listener ignores nonstandard attributes; NO
+            otherwise.</Abstract></ReturnValue>
+			<Anchor>//api/name/ignoresNonstandardAttributes</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

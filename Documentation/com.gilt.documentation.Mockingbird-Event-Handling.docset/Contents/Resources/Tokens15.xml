@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBEventHandlerContainer.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBEventHandlerContainer</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+            
+			
+			<NodeRef refid="15"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventHandlerContainer/setEventHandlers:</TokenIdentifier>
+			<Abstract type="html">The MBEventHandler instances within this container.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *eventHandlers</Declaration>
+			
+			
+			<Anchor>//api/name/eventHandlers</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventHandlerContainer/eventHandlers</TokenIdentifier>
+			<Abstract type="html">The MBEventHandler instances within this container.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *eventHandlers</Declaration>
+			
+			
+			<Anchor>//api/name/eventHandlers</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBEventHandlerContainer/eventHandlers</TokenIdentifier>
+			<Abstract type="html">The MBEventHandler instances within this container.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *eventHandlers</Declaration>
+			
+			
+			<Anchor>//api/name/eventHandlers</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventHandlerContainer/setFlowControlState:</TokenIdentifier>
+			<Abstract type="html">When processing actions in response to receiving an event, an individual
+    action may change the value of this property, which will affect how (and
+    whether) further actions in the container are executed. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) MBFlowControlState flowControlState</Declaration>
+			
+			
+			<Anchor>//api/name/flowControlState</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventHandlerContainer/flowControlState</TokenIdentifier>
+			<Abstract type="html">When processing actions in response to receiving an event, an individual
+    action may change the value of this property, which will affect how (and
+    whether) further actions in the container are executed. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) MBFlowControlState flowControlState</Declaration>
+			
+			
+			<Anchor>//api/name/flowControlState</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBEventHandlerContainer/flowControlState</TokenIdentifier>
+			<Abstract type="html">When processing actions in response to receiving an event, an individual
+    action may change the value of this property, which will affect how (and
+    whether) further actions in the container are executed. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) MBFlowControlState flowControlState</Declaration>
+			
+			
+			<Anchor>//api/name/flowControlState</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

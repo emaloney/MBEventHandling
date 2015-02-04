@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBLoadFileAction.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBLoadFileAction</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>FileActions.h</DeclaredIn>
+            
+			
+			<NodeRef refid="26"/>
+		</Token>
+		
+		
+        
+        
+	</File>
+</Tokens>

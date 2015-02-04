@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBEventListener.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBEventListener</TokenIdentifier>
+			<Abstract type="html">A class that can listen to one or more events and execute one or more
+MBEventHandlers when upon receiving an event.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+            
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/setName:</TokenIdentifier>
+			<Abstract type="html">The name of the listener. If no name is explicitly specified as an MBML
+    attribute, this will contain the value of the &quot;event&quot; attribute. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/name</TokenIdentifier>
+			<Abstract type="html">The name of the listener. If no name is explicitly specified as an MBML
+    attribute, this will contain the value of the &quot;event&quot; attribute. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBEventListener/name</TokenIdentifier>
+			<Abstract type="html">The name of the listener. If no name is explicitly specified as an MBML
+    attribute, this will contain the value of the &quot;event&quot; attribute. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSString *name</Declaration>
+			
+			
+			<Anchor>//api/name/name</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/setEvents:</TokenIdentifier>
+			<Abstract type="html">The list of events for which the receiver will listen.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/events</TokenIdentifier>
+			<Abstract type="html">The list of events for which the receiver will listen.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBEventListener/events</TokenIdentifier>
+			<Abstract type="html">The list of events for which the receiver will listen.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) NSArray *events</Declaration>
+			
+			
+			<Anchor>//api/name/events</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/setWarnOnOverwriteSpecified:</TokenIdentifier>
+			<Abstract type="html">Returns YES if the receiver contains a &quot;warnOnOverwrite&quot; attribute.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL warnOnOverwriteSpecified</Declaration>
+			
+			
+			<Anchor>//api/name/warnOnOverwriteSpecified</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/warnOnOverwriteSpecified</TokenIdentifier>
+			<Abstract type="html">Returns YES if the receiver contains a &quot;warnOnOverwrite&quot; attribute.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL warnOnOverwriteSpecified</Declaration>
+			
+			
+			<Anchor>//api/name/warnOnOverwriteSpecified</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBEventListener/warnOnOverwriteSpecified</TokenIdentifier>
+			<Abstract type="html">Returns YES if the receiver contains a &quot;warnOnOverwrite&quot; attribute.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL warnOnOverwriteSpecified</Declaration>
+			
+			
+			<Anchor>//api/name/warnOnOverwriteSpecified</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/setSuppressOverwriteWarning:</TokenIdentifier>
+			<Abstract type="html">Returns YES if the receiver&apos;s &quot;warnOnOverwrite&quot; attribute evaluated to
+    YES when the receiver was instantiated. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL suppressOverwriteWarning</Declaration>
+			
+			
+			<Anchor>//api/name/suppressOverwriteWarning</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/suppressOverwriteWarning</TokenIdentifier>
+			<Abstract type="html">Returns YES if the receiver&apos;s &quot;warnOnOverwrite&quot; attribute evaluated to
+    YES when the receiver was instantiated. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL suppressOverwriteWarning</Declaration>
+			
+			
+			<Anchor>//api/name/suppressOverwriteWarning</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBEventListener/suppressOverwriteWarning</TokenIdentifier>
+			<Abstract type="html">Returns YES if the receiver&apos;s &quot;warnOnOverwrite&quot; attribute evaluated to
+    YES when the receiver was instantiated. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL suppressOverwriteWarning</Declaration>
+			
+			
+			<Anchor>//api/name/suppressOverwriteWarning</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/startListening</TokenIdentifier>
+			<Abstract type="html">Causes the receiver to start listening for events.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>- (void)startListening</Declaration>
+			
+			
+			<Anchor>//api/name/startListening</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/stopListening</TokenIdentifier>
+			<Abstract type="html">Causes the receiver to stop listening for events.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>- (void)stopListening</Declaration>
+			
+			
+			<Anchor>//api/name/stopListening</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/setIsListening:</TokenIdentifier>
+			<Abstract type="html">Indicates whether the receiver is currently listeneing for events. Only
+    when listening will the receiver handle events. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isListening</Declaration>
+			
+			
+			<Anchor>//api/name/isListening</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/isListening</TokenIdentifier>
+			<Abstract type="html">Indicates whether the receiver is currently listeneing for events. Only
+    when listening will the receiver handle events. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isListening</Declaration>
+			
+			
+			<Anchor>//api/name/isListening</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MBEventListener/isListening</TokenIdentifier>
+			<Abstract type="html">Indicates whether the receiver is currently listeneing for events. Only
+    when listening will the receiver handle events. </Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) BOOL isListening</Declaration>
+			
+			
+			<Anchor>//api/name/isListening</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBEventListener/traceIdentifierForEvent:</TokenIdentifier>
+			<Abstract type="html">Returns a string that will be used for outputting debugging information
+in conjunction with execution tracing.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)traceIdentifierForEvent:(NSNotification *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">the event.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/traceIdentifierForEvent:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

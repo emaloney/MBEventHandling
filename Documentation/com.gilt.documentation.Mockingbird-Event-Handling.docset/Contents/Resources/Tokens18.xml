@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBExecutableListenerAction.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBExecutableListenerAction</TokenIdentifier>
+			<Abstract type="html">The base class for listener action implementations that can be directly
+executed.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+            
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBExecutableListenerAction/executeForEvent:</TokenIdentifier>
+			<Abstract type="html">Implemented by subclasses to perform the action when an event is received.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>- (void)executeForEvent:(NSNotification *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">the NSNotification that triggered the event listener.
+            This parameter may be nil if the action is not being excuted
+            as the result of an event trigger.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/executeForEvent:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBExecutableListenerAction/execute</TokenIdentifier>
+			<Abstract type="html">Allows manual execution of the action, without being triggered by an event.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>- (void)execute</Declaration>
+			
+			
+			<Anchor>//api/name/execute</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBExecutableListenerAction/validateAndExecuteForEvent:</TokenIdentifier>
+			<Abstract type="html">Attempts to validate the receiver&apos;s data model and, if successful,
+executes the event using the passed-in notification.</Abstract>
+			<DeclaredIn>MBEventListener.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)validateAndExecuteForEvent:(NSNotification *)event</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>event</Name>
+					<Abstract type="html">the NSNotification that triggered the event listener.
+            This parameter may be nil if the action is not being excuted
+            as the result of an event trigger.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">YES if the data model validated and the event was executed;
+            NO if the event did not execute because the data model wasn&apos;t
+            valid.</Abstract></ReturnValue>
+			<Anchor>//api/name/validateAndExecuteForEvent:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
