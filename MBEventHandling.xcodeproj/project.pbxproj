@@ -374,7 +374,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/Pods/MBToolbox/BuildControl/public/buildMockingbirdDocumentation.sh --module \"Event Handling\"";
+			shellScript = "$PROJECT_DIR/Pods/MBToolbox/BuildControl/public/buildMockingbirdDocumentation.sh --module \"Event Handling Module\"";
 		};
 		F06CD080E64591653CF29877 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
