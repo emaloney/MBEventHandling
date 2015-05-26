@@ -172,7 +172,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     }
     @catch (NSException* ex) {
         errorLog(@"Exception while executing the <%@> action triggered by the event \"%@\" being handled by the listener:\n%@\n", handler.xmlTagName, event.name, [listener.simulatedXML stringByIndentingEachLineWithTab]);
-        exceptionLog(ex);
+        errorObj(ex);
     }
 }
 
