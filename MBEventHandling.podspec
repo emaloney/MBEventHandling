@@ -34,6 +34,6 @@ Pod::Spec.new do |s|
 	# Dependencies
 	#----------------------------------------------------------------
 
-	s.dependency 'MBDataEnvironment', '~> 1.0.0'
+	s.dependency 'MBDataEnvironment', '~> 1.1.0'
 
 end
