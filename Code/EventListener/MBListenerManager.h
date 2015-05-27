@@ -16,7 +16,7 @@
 
 /*! The name of the XML element ("Listener") for declaring event listeners
     and their contained actions. */
-extern NSString* const kMBEventListenerXMLTag;
+extern NSString* const __nonnull kMBEventListenerXMLTag;
 
 /******************************************************************************/
 #pragma mark -
@@ -43,15 +43,15 @@ extern NSString* const kMBEventListenerXMLTag;
 
 /*! Adds an event listener, and if the receiver is associated with the active
     environment, intructs the listener to start listening for events. */
-- (void) addListener:(MBEventListener*)listener;
+- (void) addListener:(nonnull MBEventListener*)listener;
 
 /*! Removes the event listener from control by the receiver, and instructs
     the listener to stop listening for events. */
-- (void) removeListener:(MBEventListener*)listener;
+- (void) removeListener:(nonnull MBEventListener*)listener;
 
 /*! Removes the event listener with the specified name, and instructs the
     listener to stop listening for events. */
-- (void) removeListenerWithName:(NSString*)name;
+- (void) removeListenerWithName:(nonnull NSString*)name;
 
 /******************************************************************************/
 #pragma mark Accessing listeners
@@ -59,18 +59,18 @@ extern NSString* const kMBEventListenerXMLTag;
 
 /*! Returns an array containing the names of all listeners managed by the
     receiver. */
-- (NSArray*) listenerNames;
+- (nonnull NSArray*) listenerNames;
 
 /*! Returns the event listener associated with the specified name. */
-- (MBEventListener*) listenerWithName:(NSString*)name;
+- (nullable MBEventListener*) listenerWithName:(nonnull NSString*)name;
 
 /*! Returns an array of all events listened to by the various event
     listeners managed by the receiver. */
-- (NSArray*) listenerEvents;
+- (nonnull NSArray*) listenerEvents;
 
 /*! Returns an array of the MBEventListeners that are listening for the
     specified event. */
-- (NSArray*) listenersForEvent:(NSString*)event;
+- (nonnull NSArray*) listenersForEvent:(nonnull NSString*)event;
 
 @end
 

@@ -41,7 +41,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     
@@ -61,7 +61,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
 
@@ -81,7 +81,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
 
@@ -101,7 +101,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
 
@@ -121,7 +121,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     

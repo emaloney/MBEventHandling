@@ -20,19 +20,19 @@
 
 @implementation MBBreakAction
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeIf];
 }
 
-+ (NSSet*) unsupportedAttributes
++ (nullable NSSet*) unsupportedAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeAfterDelay];
 }
 
-- (void) eventReceived:(NSNotification*)event
-            byListener:(MBEventListener*)listener
-             container:(MBEventHandlerContainer*)container
+- (void) eventReceived:(nonnull NSNotification*)event
+            byListener:(nullable MBEventListener*)listener
+             container:(nullable MBEventHandlerContainer*)container
 {
     debugTrace();
     
@@ -48,24 +48,24 @@
 
 @implementation MBAssertAction
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeCondition];
 }
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeMessage];
 }
 
-+ (NSSet*) unsupportedAttributes
++ (nullable NSSet*) unsupportedAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeAfterDelay];
 }
 
-- (void) eventReceived:(NSNotification*)event
-            byListener:(MBEventListener*)listener
-             container:(MBEventHandlerContainer*)container
+- (void) eventReceived:(nonnull NSNotification*)event
+            byListener:(nullable MBEventListener*)listener
+             container:(nullable MBEventHandlerContainer*)container
 {
     debugTrace();
     
@@ -94,14 +94,14 @@
 
 @implementation MBWhenAction
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeIf];
 }
 
-- (void) eventReceived:(NSNotification*)event
-            byListener:(MBEventListener*)listener
-             container:(MBEventHandlerContainer*)container
+- (void) eventReceived:(nonnull NSNotification*)event
+            byListener:(nullable MBEventListener*)listener
+             container:(nullable MBEventHandlerContainer*)container
 {
     debugTrace();
 
@@ -124,12 +124,12 @@
 
 @implementation MBCaseAction
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeIf];
 }
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeContinue];
 }
@@ -149,9 +149,9 @@
     }
 }
 
-- (void) eventReceived:(NSNotification*)event
-            byListener:(MBEventListener*)listener
-             container:(MBEventHandlerContainer*)container
+- (void) eventReceived:(nonnull NSNotification*)event
+            byListener:(nullable MBEventListener*)listener
+             container:(nullable MBEventHandlerContainer*)container
 {
     debugTrace();
 
@@ -170,7 +170,7 @@
 
 @implementation MBDefaultCaseAction
 
-+ (NSSet*) unsupportedAttributes
++ (nullable NSSet*) unsupportedAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeIf];
 }
@@ -196,9 +196,9 @@
     return retVal;
 }
 
-- (void) eventReceived:(NSNotification*)event
-            byListener:(MBEventListener*)listener
-             container:(MBEventHandlerContainer*)container
+- (void) eventReceived:(nonnull NSNotification*)event
+            byListener:(nullable MBEventListener*)listener
+             container:(nullable MBEventHandlerContainer*)container
 {
     debugTrace();
 

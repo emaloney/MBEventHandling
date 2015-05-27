@@ -12,12 +12,12 @@
 #pragma mark Constants - MBML attribute names
 /******************************************************************************/
 
-extern NSString* const kMBMLAttributeCondition;
-extern NSString* const kMBMLAttributeContinue;
-extern NSString* const kMBMLAttributeAfterDelay;
-extern NSString* const kMBMLAttributeListIndex;
-extern NSString* const kMBMLAttributeMapKey;
-extern NSString* const kMBMLAttributeTrace;
-extern NSString* const kMBMLAttributeForceReload;
-extern NSString* const kMBMLAttributeBreak;
-extern NSString* const kMBMLAttributeWarnOnOverwrite;
+extern NSString* const __nonnull kMBMLAttributeCondition;
+extern NSString* const __nonnull kMBMLAttributeContinue;
+extern NSString* const __nonnull kMBMLAttributeAfterDelay;
+extern NSString* const __nonnull kMBMLAttributeListIndex;
+extern NSString* const __nonnull kMBMLAttributeMapKey;
+extern NSString* const __nonnull kMBMLAttributeTrace;
+extern NSString* const __nonnull kMBMLAttributeForceReload;
+extern NSString* const __nonnull kMBMLAttributeBreak;
+extern NSString* const __nonnull kMBMLAttributeWarnOnOverwrite;

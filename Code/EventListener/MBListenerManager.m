@@ -78,22 +78,22 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 #pragma mark Adding & removing listeners
 /******************************************************************************/
 
-- (void) addListener:(MBEventListener*)newListener
+- (void) addListener:(nonnull MBEventListener*)listener
 {
     verboseDebugTrace();
     
     if (!self.isActive) {
-        [_pendingListeners addObject:newListener];
+        [_pendingListeners addObject:listener];
     }
     else {
-        [self _activateListener:newListener];
-        if (!newListener.isListening) {
-            [newListener startListening];
+        [self _activateListener:listener];
+        if (!listener.isListening) {
+            [listener startListening];
         }
     }
 }
 
-- (void) removeListenerWithName:(NSString*)name
+- (void) removeListenerWithName:(nonnull NSString*)name
 {
     verboseDebugTrace();
     
@@ -103,7 +103,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
     }
 }
 
-- (void) removeListener:(MBEventListener*)listener
+- (void) removeListener:(nonnull MBEventListener*)listener
 {
     verboseDebugTrace();
 
@@ -135,17 +135,17 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 #pragma mark Accessing listeners
 /******************************************************************************/
 
-- (NSArray*) listenerNames
+- (nonnull NSArray*) listenerNames
 {
     return [_nameToListener allKeys];
 }
 
-- (MBEventListener*) listenerWithName:(NSString*)name
+- (nullable MBEventListener*) listenerWithName:(nonnull NSString*)name
 {
     return _nameToListener[name];
 }
 
-- (NSArray*) listenerEvents
+- (nonnull NSArray*) listenerEvents
 {
     return [_eventToListeners allKeys];
 }
@@ -156,7 +156,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
     if (listeners.count > 0) {
         return [NSArray arrayWithArray:listeners];
     }
-    return nil;
+    return [NSArray new];
 }
 
 /******************************************************************************/

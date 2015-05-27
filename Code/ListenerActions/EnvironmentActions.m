@@ -33,7 +33,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     
@@ -63,12 +63,12 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeFile];
 }
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeForceReload];
 }
@@ -77,7 +77,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     
@@ -106,7 +106,7 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeURL, kMBMLAttributeVar, nil];
 }
@@ -115,7 +115,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     

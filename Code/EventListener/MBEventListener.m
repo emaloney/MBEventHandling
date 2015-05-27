@@ -50,7 +50,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeTrace,
             kMBMLAttributeIf,
@@ -61,7 +61,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 #pragma mark Class lookup
 /******************************************************************************/
 
-+ (Class) classForEventHandler:(NSString*)eventHandlerName
++ (nullable Class) classForEventHandler:(nonnull NSString*)eventHandlerName
 {
     Class cls = [MBEnvironment libraryClassForName:[eventHandlerName stringByAppendingString:kMBMLActionTag]];
     if (![cls isSubclassOfClass:[MBEventHandler class]]) {
@@ -74,16 +74,16 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 #pragma mark Event handling
 /******************************************************************************/
 
-- (BOOL) shouldHandleEvent:(NSNotification*)event
-        receivedByListener:(MBEventListener*)listener
-                 container:(MBEventHandlerContainer*)container;
+- (BOOL) shouldHandleEvent:(nonnull NSNotification*)event
+        receivedByListener:(nullable MBEventListener*)listener
+                 container:(nullable MBEventHandlerContainer*)container
 {
     return [self evaluateAsBoolean:kMBMLAttributeIf defaultValue:YES];
 }
 
-- (void) eventReceived:(NSNotification*)event
-            byListener:(MBEventListener*)listener
-             container:(MBEventHandlerContainer*)container
+- (void) eventReceived:(nonnull NSNotification*)event
+            byListener:(nullable MBEventListener*)listener
+             container:(nullable MBEventHandlerContainer*)container
 {
     MBErrorNotImplemented();
 }
@@ -176,9 +176,9 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     }
 }
 
-- (void) eventReceived:(NSNotification*)event
-            byListener:(MBEventListener*)listener
-             container:(MBEventHandlerContainer*)container
+- (void) eventReceived:(nonnull NSNotification*)event
+            byListener:(nullable MBEventListener*)listener
+             container:(nullable MBEventHandlerContainer*)container
 {
     NSString* traceID = nil;
     if (self.traceExecution) {
@@ -273,7 +273,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     return @"Listener";
 }
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeName,
             kMBMLAttributeEvent,
@@ -395,7 +395,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 #pragma mark Event handling
 /******************************************************************************/
 
-- (NSString*) traceIdentifierForEvent:(NSNotification*)event
+- (nonnull NSString*) traceIdentifierForEvent:(nonnull NSNotification*)event
 {
     NSString* eventName = event.name;
     NSString* listenerName = self.name;
@@ -462,7 +462,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 #pragma mark Data model support
 /******************************************************************************/
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeIf,
             kMBMLAttributeAfterDelay,
@@ -528,9 +528,9 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 #pragma mark Action execution
 /******************************************************************************/
 
-- (void) eventReceived:(NSNotification*)event
-            byListener:(MBEventListener*)listener
-             container:(MBEventHandlerContainer*)container
+- (void) eventReceived:(nonnull NSNotification*)event
+            byListener:(nullable MBEventListener*)listener
+             container:(nullable MBEventHandlerContainer*)container
 {
     debugTrace();
     
@@ -539,7 +539,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     container.flowControlState = MBFlowControlStateContinue;
 }
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     MBErrorNotImplemented();
 }
@@ -551,7 +551,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     [self executeForEvent:nil];
 }
 
-- (BOOL) validateAndExecuteForEvent:(NSNotification*)event
+- (BOOL) validateAndExecuteForEvent:(nullable NSNotification*)event
 {
     debugTrace();
 
@@ -579,7 +579,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     return YES;
 }
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     

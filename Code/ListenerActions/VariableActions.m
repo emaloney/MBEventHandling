@@ -26,7 +26,7 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeName];
 }
@@ -40,7 +40,7 @@
     MBErrorNotImplemented();
 }
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     verboseDebugTrace();
 
@@ -61,7 +61,7 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeValue,
             kMBMLAttributeLiteral,
@@ -167,7 +167,7 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeMapKey,
             kMBMLAttributeListIndex,

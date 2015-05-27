@@ -22,7 +22,9 @@
  by the `MBServiceManager`.
  */
 @interface MBServiceActionBase : MBExecutableListenerAction
-- (void) executeForService:(MBService*)svc named:(NSString*)svcName manager:(MBServiceManager*)mgr;
+- (void) executeForService:(nonnull MBService*)svc
+                     named:(nonnull NSString*)svcName
+                   manager:(nonnull MBServiceManager*)mgr;
 @end
 
 /******************************************************************************/

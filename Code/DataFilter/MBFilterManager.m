@@ -88,14 +88,14 @@ NSString* const kMBMLTagDataFilter            = @"DataFilter";
 #pragma mark Accessing data filters
 /******************************************************************************/
 
-- (NSArray*) filterNames
+- (nonnull NSArray*) filterNames
 {
     verboseDebugTrace();
     
     return [_namesToFilters allKeys];
 }
 
-- (MBDataFilter*) filterWithName:(NSString*)name
+- (nullable MBDataFilter*) filterWithName:(nonnull NSString*)name
 {
     verboseDebugTrace();
     

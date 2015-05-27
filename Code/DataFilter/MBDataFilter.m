@@ -42,7 +42,7 @@
     return kDataFilterTag;
 }
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeName,
             kMBMLAttributeVar,
@@ -131,7 +131,7 @@
 #pragma mark Property handling
 /******************************************************************************/
 
-- (NSString*) name
+- (nullable NSString*) name
 {
     return [self stringValueOfAttribute:kMBMLAttributeName];
 }

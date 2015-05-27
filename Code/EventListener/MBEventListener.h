@@ -17,11 +17,11 @@
 
 /*! While an event listener is handling an NSNotification, this MBML variable
     ("Event") contain the NSNotification instance being handled. */
-extern NSString* const kMBEventListenerNotificationVariable;
+extern NSString* const __nonnull kMBEventListenerNotificationVariable;
 
 /*! If the value of this MBML expression ("$Debug:traceActions") evaluates
     to YES, the execution of actions will be logged to the console. */
-extern NSString* const kMBEventListenerTraceActionsExpression;
+extern NSString* const __nonnull kMBEventListenerTraceActionsExpression;
 
 /******************************************************************************/
 #pragma mark MBFlowControlState type
@@ -59,7 +59,7 @@ typedef enum : NSInteger {
  
  @return    The implementing class, or nil if none could be found.
  */
-+ (Class) classForEventHandler:(NSString*)eventHandlerName;
++ (nullable Class) classForEventHandler:(nonnull NSString*)eventHandlerName;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Processing events
@@ -77,14 +77,20 @@ typedef enum : NSInteger {
  attribute or when expression contained in the receiver's "`if`"
  attribute evaluates to `YES`.
 
- @param     event the event.
+ @param     event the event that was received.
  
+ @param     listener the event listener that received the event. May be `nil`
+            if event handling is being invoked manually.
+ 
+ @param     container the receiver's container. May be the `listener` itself,
+            or may be `nil` if event handling is being invoked manually.
+
  @return    `YES` if the receiver is interested in handling the event;
             `NO` otherwise.
  */
-- (BOOL) shouldHandleEvent:(NSNotification*)event
-        receivedByListener:(MBEventListener*)listener
-                 container:(MBEventHandlerContainer*)container;
+- (BOOL) shouldHandleEvent:(nonnull NSNotification*)event
+        receivedByListener:(nullable MBEventListener*)listener
+                 container:(nullable MBEventHandlerContainer*)container;
 
 /*!
  Must be implemented by subclasses to process an event.
@@ -93,13 +99,15 @@ typedef enum : NSInteger {
  
  @param     event the event that was received.
  
- @param     listener the event listener that received the event.
+ @param     listener the event listener that received the event. May be `nil`
+            if event handling is being invoked manually.
  
- @param     container the receiver's container. May be the `listener` itself.
+ @param     container the receiver's container. May be the `listener` itself,
+            or may be `nil` if event handling is being invoked manually.
  */
-- (void) eventReceived:(NSNotification*)event
-            byListener:(MBEventListener*)listener
-             container:(MBEventHandlerContainer*)container;
+- (void) eventReceived:(nonnull NSNotification*)event
+            byListener:(nullable MBEventListener*)listener
+             container:(nullable MBEventHandlerContainer*)container;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Debugging support
@@ -125,7 +133,7 @@ typedef enum : NSInteger {
 /*----------------------------------------------------------------------------*/
 
 /*! The `MBEventHandler` instances within this container. */
-@property(nonatomic, readonly) NSArray* eventHandlers;
+@property(nonnull, nonatomic, readonly) NSArray* eventHandlers;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Event handler flow control
@@ -157,10 +165,10 @@ typedef enum : NSInteger {
 
 /*! The name of the listener. If no name is explicitly specified as an MBML
     attribute, this will contain the value of the "`event`" attribute. */
-@property(nonatomic, readonly) NSString* name;
+@property(nullable, nonatomic, readonly) NSString* name;
 
 /*! The list of events for which the receiver will listen. */
-@property(nonatomic, readonly) NSArray* events;
+@property(nonnull, nonatomic, readonly) NSArray* events;
 
 /*----------------------------------------------------------------------------*/
 #pragma mark Listener overwriting warnings
@@ -208,7 +216,7 @@ typedef enum : NSInteger {
  
  @param     event the event.
  */
-- (NSString*) traceIdentifierForEvent:(NSNotification*)event;
+- (nonnull NSString*) traceIdentifierForEvent:(nonnull NSNotification*)event;
 
 @end
 
@@ -298,10 +306,11 @@ typedef enum : NSInteger {
  `eventReceived:byListener:container:`.
 
  @param     event the NSNotification that triggered the event listener.
-            This parameter may be `nil` if the action is not being excuted
-            as the result of an event trigger.
+            This parameter may be `nil` if the action is not being executed
+            as the result of an event trigger (in other words, when the
+            listener action is being invoked manually).
  */
-- (void) executeForEvent:(NSNotification*)event;
+- (void) executeForEvent:(nullable NSNotification*)event;
 
 /*!
  Allows manual execution of the action, without being triggered by an event.
@@ -315,14 +324,15 @@ typedef enum : NSInteger {
  executes the event using the passed-in notification.
 
  @param     event the `NSNotification` that triggered the event listener.
-            This parameter may be `nil` if the action is not being excuted
-            as the result of an event trigger.
+            This parameter may be `nil` if the action is not being executed
+            as the result of an event trigger (in other words, when the
+            listener action is being invoked manually).
 
  @return    `YES` if the data model validated and the event was executed;
             `NO` if the event did not execute because the data model wasn't
             valid.
  */
-- (BOOL) validateAndExecuteForEvent:(NSNotification*)event;
+- (BOOL) validateAndExecuteForEvent:(nullable NSNotification*)event;
 
 @end
 

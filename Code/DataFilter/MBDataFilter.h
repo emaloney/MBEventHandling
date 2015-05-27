@@ -15,7 +15,7 @@
 
 @interface MBDataFilter : MBDataModel
 
-@property(nonatomic, strong) MBMLAttribute NSString* name;
+@property(nullable, nonatomic, strong) MBMLAttribute NSString* name;
 
 - (void) refreshData;
 

@@ -17,7 +17,7 @@
 
 @implementation MBEventHandlingModule
 
-+ (NSArray*) environmentLoaderClasses
++ (nullable NSArray*) environmentLoaderClasses
 {
     return @[[MBListenerManager class], [MBFilterManager class]];
 }

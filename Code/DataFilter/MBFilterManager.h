@@ -28,7 +28,7 @@
  
  @return    The names of the filters.
  */
-- (NSArray*) filterNames;
+- (nonnull NSArray*) filterNames;
 
 /*!
  Returns the `MBDataFilter` associated with the specified name.
@@ -38,6 +38,6 @@
  @return    The data filter, or `nil` if there is no filter with the
             specified name.
  */
-- (MBDataFilter*) filterWithName:(NSString*)name;
+- (nullable MBDataFilter*) filterWithName:(nonnull NSString*)name;
 
 @end

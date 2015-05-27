@@ -23,12 +23,12 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeFile, kMBMLAttributeVar, nil];
 }
 
-+ (NSSet*) supportedAttributes
++ (nullable NSSet*) supportedAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeType];
 }
@@ -37,7 +37,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     
@@ -77,7 +77,7 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeFile, kMBMLAttributeVar, nil];
 }
@@ -86,7 +86,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     
@@ -138,7 +138,7 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeFile];
 }
@@ -147,7 +147,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     
@@ -174,7 +174,7 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObjects:kMBMLAttributeFile,
             kMBMLAttributeTarget,
@@ -185,7 +185,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
 

@@ -23,7 +23,7 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeClass];
 }
@@ -32,7 +32,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     debugTrace();
     
@@ -52,7 +52,9 @@
     }
 }
 
-- (void) executeForService:(MBService*)svc named:(NSString*)svcName manager:(MBServiceManager*)mgr
+- (void) executeForService:(nonnull MBService*)svc
+                     named:(nonnull NSString*)svcName
+                   manager:(nonnull MBServiceManager*)mgr
 {
     MBErrorNotImplemented();
 }
@@ -70,7 +72,9 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForService:(MBService*)svc named:(NSString*)svcName manager:(MBServiceManager*)mgr
+- (void) executeForService:(nonnull MBService*)svc
+                     named:(nonnull NSString*)svcName
+                   manager:(nonnull MBServiceManager*)mgr
 {
     debugTrace();
     
@@ -90,7 +94,9 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForService:(MBService*)svc named:(NSString*)svcName manager:(MBServiceManager*)mgr
+- (void) executeForService:(nonnull MBService*)svc
+                     named:(nonnull NSString*)svcName
+                   manager:(nonnull MBServiceManager*)mgr
 {
     debugTrace();
     

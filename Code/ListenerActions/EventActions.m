@@ -24,7 +24,7 @@
 #pragma mark Data model enforcement
 /******************************************************************************/
 
-+ (NSSet*) requiredAttributes
++ (nullable NSSet*) requiredAttributes
 {
     return [NSSet setWithObject:kMBMLAttributeName];
 }
@@ -38,7 +38,7 @@
 #pragma mark Action implementation
 /******************************************************************************/
 
-- (void) executeForEvent:(NSNotification*)event
+- (void) executeForEvent:(nullable NSNotification*)event
 {
     NSString* eventName = [self evaluateAsString:kMBMLAttributeName];
     
