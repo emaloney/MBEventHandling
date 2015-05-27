@@ -10,7 +10,7 @@
 Pod::Spec.new do |s|
 
 	s.name                  = "MBEventHandling"
-	s.version               = "0.10.0"
+	s.version               = "0.9.8"
 	s.summary               = "Mockingbird Event Handling Extensions"
 	s.description		= "Provides a mechanism for performing runtime actions in response to NSNotification events."
 	s.homepage		= "https://github.com/emaloney/MBEventHandling"
@@ -34,6 +34,6 @@ Pod::Spec.new do |s|
 	# Dependencies
 	#----------------------------------------------------------------
 
-	s.dependency 'MBDataEnvironment', '~> 1.1.0'
+	s.dependency 'MBDataEnvironment', '~> 1.0.0'
 
 end
