@@ -35,7 +35,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     MBEnvironment* env = [MBEnvironment instance];
     for (NSString* key in [self attributeNames]) {
@@ -44,7 +44,7 @@
                 [env setAttribute:self[key] forName:key];
             }
             @catch (NSException* ex) {
-                errorLog(@"The <%@> action failed to set environment info for key \"%@\": %@", self.xmlTagName, key, [ex callStackSymbols]);
+                MBLogError(@"The <%@> action failed to set environment info for key \"%@\": %@", self.xmlTagName, key, [ex callStackSymbols]);
             }
         }
     }
@@ -79,7 +79,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     MBEnvironment* env = [MBEnvironment instance];
     
@@ -87,7 +87,7 @@
     if (file) {
         if (![env mbmlFileIsLoaded:file] || [self evaluateAsBoolean:kMBMLAttributeForceReload]) {
             if (![env loadMBMLFile:file]) {
-                errorLog(@"The <%@> action failed to load %@ for: %@", self.xmlTagName, file, self.simulatedXML);
+                MBLogError(@"The <%@> action failed to load %@ for: %@", self.xmlTagName, file, self.simulatedXML);
             }
         }
     }
@@ -117,7 +117,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     NSString* urlStr = [self evaluateAsString:kMBMLAttributeURL];
     NSString* var = [self stringValueOfAttribute:kMBMLAttributeVar];
@@ -129,7 +129,7 @@
             canOpen = [[UIApplication sharedApplication] canOpenURL:url];
         }
         else {
-            errorLog(@"The <%@> could not interpret the value of the %@ attribute (\"%@\" from expression: \"%@\") as a valid URL", self.xmlTagName, kMBMLAttributeURL, [self evaluateAsString:kMBMLAttributeURL], self[kMBMLAttributeURL]);
+            MBLogError(@"The <%@> could not interpret the value of the %@ attribute (\"%@\" from expression: \"%@\") as a valid URL", self.xmlTagName, kMBMLAttributeURL, [self evaluateAsString:kMBMLAttributeURL], self[kMBMLAttributeURL]);
         }
         NSString* varValue = [MBExpression stringFromBoolean:canOpen];
         [MBVariableSpace instance][var] = varValue;

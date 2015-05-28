@@ -38,7 +38,7 @@
     if (filterName) {
         MBDataFilter* filter = [[MBFilterManager instance] filterWithName:filterName];
 
-        debugLog(@"Executing <%@> for <%@> named: %@", self.xmlTagName, filter.xmlTagName, filterName);
+        MBLogDebug(@"Executing <%@> for <%@> named: %@", self.xmlTagName, filter.xmlTagName, filterName);
 
         [filter refreshData];
     }

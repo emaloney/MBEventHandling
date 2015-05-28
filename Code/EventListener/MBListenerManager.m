@@ -80,7 +80,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 
 - (void) addListener:(nonnull MBEventListener*)listener
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
     
     if (!self.isActive) {
         [_pendingListeners addObject:listener];
@@ -95,7 +95,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 
 - (void) removeListenerWithName:(nonnull NSString*)name
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
     
     MBEventListener* listener = _nameToListener[name];
     if (listener) {
@@ -105,7 +105,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 
 - (void) removeListener:(nonnull MBEventListener*)listener
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
 
     [listener stopListening];
         
@@ -123,7 +123,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 
 - (void) removeAllListeners
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
     
     [self stopAllListeners];
     
@@ -170,7 +170,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
         MBEventListener* curListener = _nameToListener[name];
         if (curListener) {
             if (!curListener.suppressOverwriteWarning) {
-                errorLog(@"WARNING: The event listener named \"%@\" is being overwritten!\n\n\tExisting listener: %@\tNew listener: %@\tTo avoid this warning, specify %@=\"F\" on the <%@>", name, [[curListener description] stringByIndentingEachLineWithTabs:2], [[newListener description] stringByIndentingEachLineWithTabs:2], kMBMLAttributeWarnOnOverwrite, newListener.xmlTagName);
+                MBLogWarning(@"The event listener named \"%@\" is being overwritten!\n\n\tExisting listener: %@\tNew listener: %@\tTo avoid this warning, specify %@=\"F\" on the <%@>", name, [[curListener description] stringByIndentingEachLineWithTabs:2], [[newListener description] stringByIndentingEachLineWithTabs:2], kMBMLAttributeWarnOnOverwrite, newListener.xmlTagName);
             }
             if (!newListener.warnOnOverwriteSpecified) {
                 newListener.suppressOverwriteWarning = curListener.suppressOverwriteWarning;
@@ -189,13 +189,13 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
         }
     }
     else {
-        errorLog(@"This Listener declaration isn't valid and it will therefore be ignored: %@", newListener);
+        MBLogError(@"This Listener declaration isn't valid and it will therefore be ignored: %@", newListener);
     }
 }
 
 - (void) startAllListeners
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     for (NSString* name in _nameToListener) {
         MBEventListener* listener = _nameToListener[name];
@@ -207,7 +207,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 
 - (void) stopAllListeners
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     for (NSString* name in _nameToListener) {
         MBEventListener* listener = _nameToListener[name];
@@ -223,7 +223,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 
 - (void) environmentWillActivate:(MBEnvironment*)env
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [super environmentWillActivate:env];
     
@@ -235,7 +235,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 
 - (void) environmentDidActivate:(MBEnvironment*)env
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [super environmentDidActivate:env];
     
@@ -244,7 +244,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 
 - (void) environmentWillDeactivate:(MBEnvironment*)env
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [self stopAllListeners];
     
@@ -253,7 +253,7 @@ NSString* const kMBEventListenerXMLTag = @"Listener";
 
 - (void) environmentDidLoad:(MBEnvironment*)env
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [super environmentDidLoad:env];
 

@@ -56,7 +56,7 @@
 
 - (void) populateDataModelFromXML:(RXMLElement*)container
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [self addRelativeOfClass:[MBDataFilter class]
               forEachChildOf:container
@@ -67,7 +67,7 @@
                     relatedBy:(NSString*)relationType
                 dataModelRoot:(MBDataModel*)root
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     if (![super validateAsRelativeOf:relative relatedBy:relationType dataModelRoot:root]) {
         return NO;
@@ -89,11 +89,11 @@
             NSUInteger attrCnt = [self countAttributes];
             if (attrCnt > 1 && name.length) {
                 if (attrCnt > 2 || (attrCnt == 2 && ![self hasAttribute:kMBMLAttributeIf])) {
-                    errorLog(@"%@s that contain other %@s may only specify the attributes \"%@\" and \"%@\"; additional attributes will be ignored: %@", kDataFilterTag, kDataFilterTag, kMBMLAttributeName, kMBMLAttributeIf, self.simulatedXML);
+                    MBLogError(@"%@s that contain other %@s may only specify the attributes \"%@\" and \"%@\"; additional attributes will be ignored: %@", kDataFilterTag, kDataFilterTag, kMBMLAttributeName, kMBMLAttributeIf, self.simulatedXML);
                 }
             }
             else if (!name.length) {
-                errorLog(@"%@s that contain other %@s must specify a value for the \"%@\" attribute: %@", kDataFilterTag, kDataFilterTag, kMBMLAttributeName, self.simulatedXML);
+                MBLogError(@"%@s that contain other %@s must specify a value for the \"%@\" attribute: %@", kDataFilterTag, kDataFilterTag, kMBMLAttributeName, self.simulatedXML);
                 return NO;
             }
         }
@@ -101,7 +101,7 @@
             // we're not contained in another filter, and we contain no filters;
             // we're a top-level, stand-alone filter!
             if (!name.length && !varName.length) {
-                errorLog(@"%@s require a value for either the \"%@\" or the \"%@\" attribute in order to know where to store the result: %@", kDataFilterTag, kMBMLAttributeName, kMBMLAttributeVar, self.simulatedXML);
+                MBLogError(@"%@s require a value for either the \"%@\" or the \"%@\" attribute in order to know where to store the result: %@", kDataFilterTag, kMBMLAttributeName, kMBMLAttributeVar, self.simulatedXML);
                 return NO;
             }
         }
@@ -110,16 +110,16 @@
         // we're contained in another filter
         if (contained.count) {
             // contained filters can't in turn contain other filters
-            errorLog(@"%@s can only be nested one-level deep; a %@ contained in another %@ cannot in turn contain a %@: %@", kDataFilterTag, kDataFilterTag, kDataFilterTag, kDataFilterTag, self.simulatedXML);
+            MBLogError(@"%@s can only be nested one-level deep; a %@ contained in another %@ cannot in turn contain a %@: %@", kDataFilterTag, kDataFilterTag, kDataFilterTag, kDataFilterTag, self.simulatedXML);
             return NO;
         }
         else {
             if (name.length) {
-                errorLog(@"%@s that are contained in another %@ may not specify a \"%@\" attribute: %@", kDataFilterTag, kDataFilterTag, kMBMLAttributeName, self.simulatedXML);
+                MBLogError(@"%@s that are contained in another %@ may not specify a \"%@\" attribute: %@", kDataFilterTag, kDataFilterTag, kMBMLAttributeName, self.simulatedXML);
                 return NO;
             }
             else if (!varName.length) {
-                errorLog(@"%@s that are contained in another %@ must specify a value for the \"%@\" attribute: %@", kDataFilterTag, kDataFilterTag, kMBMLAttributeVar, self.simulatedXML);
+                MBLogError(@"%@s that are contained in another %@ must specify a value for the \"%@\" attribute: %@", kDataFilterTag, kDataFilterTag, kMBMLAttributeVar, self.simulatedXML);
                 return NO;
             }
         }
@@ -156,7 +156,7 @@
 
 - (NSArray*) filterByFieldCriteria:(NSArray*)data 
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     NSString* expandedFilterValue = [self evaluateAsString:kDataFilterAttributeFilterValue];
     NSString* expandedFilterVar = [self evaluateAsString:kDataFilterAttributeFilterVar];
@@ -210,13 +210,13 @@
             }
         }
     }
-    debugLog(@"Filtered array size: %ld", (unsigned long)filtered.count);
+    MBLogDebug(@"Filtered array size: %ld", (unsigned long)filtered.count);
     return filtered;
 }
 
 - (NSArray*) filterData:(NSObject<NSFastEnumeration>*)data usingExpression:(NSString*)filterExpr
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     NSMutableArray* filtered = [NSMutableArray array];
     MBVariableSpace* vars = [MBVariableSpace instance];
@@ -251,13 +251,13 @@
 
 - (void) refreshData 
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     NSString* varName = self.var;
     NSString* dataSource = [self stringValueOfAttribute:kMBMLAttributeDataSource];
     
     if (![self evaluateAsBoolean:kMBMLAttributeIf defaultValue:YES]) {
-        debugLog(@"Skipping refresh of DataFilter because if clause is false: %@", self);
+        MBLogDebug(@"Skipping refresh of DataFilter because if clause is false: %@", self);
         return;
     }
     
@@ -292,7 +292,7 @@
     NSString* name = [self stringValueOfAttribute:kMBMLAttributeName];
     NSString* event = (name ?: varName);
     if (event.length > 0) {
-        debugLog(@"Refreshed DataFilter: %@", event);
+        MBLogDebug(@"Refreshed DataFilter: %@", event);
         [MBEvents postDataLoaded:event];
     }
 }

@@ -171,8 +171,8 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
         }
     }
     @catch (NSException* ex) {
-        errorLog(@"Exception while executing the <%@> action triggered by the event \"%@\" being handled by the listener:\n%@\n", handler.xmlTagName, event.name, [listener.simulatedXML stringByIndentingEachLineWithTab]);
-        errorObj(ex);
+        MBLogError(@"Exception while executing the <%@> action triggered by the event \"%@\" being handled by the listener:\n%@\n", handler.xmlTagName, event.name, [listener.simulatedXML stringByIndentingEachLineWithTab]);
+        MBLogErrorObject(ex);
     }
 }
 
@@ -288,7 +288,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     }
 
     if (!_name || !_name.length) {
-        errorLog(@"Declaring an event listener without a name is no longer supported; this listener will be ignored: %@", self.simulatedXML);
+        MBLogError(@"Declaring an event listener without a name is no longer supported; this listener will be ignored: %@", self.simulatedXML);
         return NO;
     }
     
@@ -302,7 +302,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
         [eventList addObject:MBTrimString(event)];
     }
     if (eventList.count < 1) {
-        errorLog(@"<%@>s must specify one or more comma-separated events to listen for in the \"%@\" attribute: %@", self.xmlTagName, kMBMLAttributeEvent, self.simulatedXML);
+        MBLogError(@"<%@>s must specify one or more comma-separated events to listen for in the \"%@\" attribute: %@", self.xmlTagName, kMBMLAttributeEvent, self.simulatedXML);
         return NO;
     }
     else {
@@ -347,7 +347,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 
 - (void) setWarnOnOverwrite:(NSString*)warn
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
     
     _warnOnOverwriteSpecified = YES;
     _suppressOverwriteWarning = ![warn evaluateAsBoolean];
@@ -359,7 +359,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 
 - (void) startListening
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     if (!_isListening) {
         for (__strong NSString* event in self.events) {
@@ -373,7 +373,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
                                                        object:nil];
 
         }
-        debugLog(@"The <%@> named \"%@\" is now listening for %lu event%@: %@", self.xmlTagName, _name, (unsigned long)_events.count, (_events.count == 1 ? @"" : @"s"), [_events componentsJoinedByString:@"; "]);
+        MBLogDebug(@"The <%@> named \"%@\" is now listening for %lu event%@: %@", self.xmlTagName, _name, (unsigned long)_events.count, (_events.count == 1 ? @"" : @"s"), [_events componentsJoinedByString:@"; "]);
 
         _isListening = YES;
     }
@@ -381,13 +381,13 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 
 - (void) stopListening
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     if (_isListening) {
         [[NSNotificationCenter defaultCenter] removeObserver:self];
         _isListening = NO;
 
-        debugLog(@"The <%@> named \"%@\" has stopped listening for %lu event%@: %@", self.xmlTagName, _name, (unsigned long)_events.count, (_events.count == 1 ? @"" : @"s"), [_events componentsJoinedByString:@"; "]);
+        MBLogDebug(@"The <%@> named \"%@\" has stopped listening for %lu event%@: %@", self.xmlTagName, _name, (unsigned long)_events.count, (_events.count == 1 ? @"" : @"s"), [_events componentsJoinedByString:@"; "]);
     }
 }
 
@@ -408,7 +408,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 
 - (void) _eventTriggered:(NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     if (![[NSThread currentThread] isMainThread]) {
         [self performSelectorOnMainThread:_cmd withObject:event waitUntilDone:NO];
@@ -438,7 +438,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
         }
     }
     @catch (NSException* ex) {
-        errorLog(@"Exception while executing listener actions for event \"%@\": %@", event.name, [ex callStackSymbols]);
+        MBLogError(@"Exception while executing listener actions for event \"%@\": %@", event.name, [ex callStackSymbols]);
     }
     @finally {
         [MBScopedVariables exitVariableScope];
@@ -532,7 +532,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
             byListener:(nullable MBEventListener*)listener
              container:(nullable MBEventHandlerContainer*)container
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [self executeForEvent:event];
 
@@ -546,21 +546,21 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 
 - (void) execute
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     [self executeForEvent:nil];
 }
 
 - (BOOL) validateAndExecuteForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     if ([self validateDataModelIfNeeded]) {
         [self eventReceived:event byListener:nil container:nil];
         return YES;
     }
     else {
-        errorLog(@"Won't execute <%@> action because it is not valid: %@", self.xmlTagName, self.simulatedXML);
+        MBLogError(@"Won't execute <%@> action because it is not valid: %@", self.xmlTagName, self.simulatedXML);
     }
     return NO;
 }
@@ -581,7 +581,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     for (NSString* key in [self attributeNames]) {
         if (![key isEqualToString:kMBMLAttributeIf] && ![key isEqualToString:kMBMLAttributeBreak]) {
@@ -602,7 +602,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     if ([self booleanValueOfAttribute:kMBMLAttributeBreak]) {
 #if DEBUG
         NSString* msg = [NSString stringWithFormat:@"caused by: %@", self.simulatedXML];
-        triggerDebugBreakMsg(msg);
+        MBTriggerDebugBreakMsg(msg);
 #else
         NSLog(@"--> Using a %@ action to enter the debugger is only supported in debug builds.", self.xmlTagName);
 #endif

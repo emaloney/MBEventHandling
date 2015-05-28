@@ -34,7 +34,7 @@
             byListener:(nullable MBEventListener*)listener
              container:(nullable MBEventHandlerContainer*)container
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     container.flowControlState = MBFlowControlStateBreak;
 }
@@ -67,7 +67,7 @@
             byListener:(nullable MBEventListener*)listener
              container:(nullable MBEventHandlerContainer*)container
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     NSString* message = [self evaluateAsString:kMBMLAttributeMessage];
 
@@ -81,7 +81,7 @@
     BOOL keepGoing = [self evaluateAsBoolean:kMBMLAttributeCondition];
     if (!keepGoing) {
         container.flowControlState = MBFlowControlStateBreak;
-        errorLog(@"Assert condition failed: %@", log);
+        MBLogError(@"Assert condition failed: %@", log);
     }
 }
 
@@ -103,14 +103,14 @@
             byListener:(nullable MBEventListener*)listener
              container:(nullable MBEventHandlerContainer*)container
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     /*
      This action simply contains other actions and is invoked when the if="..."
      clause evaluates to YES. Because the processing is handled by the superclass,
      we have a rather simple implementation. There's nothing to do other than
      report that we accept the if attribute. This method implementation here
-     exists only for the debugTrace() call above.
+     exists only for the MBLogDebugTrace() call above.
      */
     [super eventReceived:event byListener:listener container:container];
 }
@@ -138,7 +138,7 @@
         receivedByListener:(MBEventListener*)listener
                  container:(MBEventHandlerContainer*)container
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     if (container.flowControlState == MBFlowControlStateCaseBlockBreak) {
         return NO;
@@ -153,7 +153,7 @@
             byListener:(nullable MBEventListener*)listener
              container:(nullable MBEventHandlerContainer*)container
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     [super eventReceived:event byListener:listener container:container];
 
@@ -179,10 +179,10 @@
         receivedByListener:(MBEventListener*)listener
                  container:(MBEventHandlerContainer*)container
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     if (!MBFlowControlStateIsCaseBlock(container.flowControlState)) {
-        errorLog(@"<%@> actions may only come after <%@> actions; the <%@> declaration within this action block is unexpected and it will not be executed:\n%@", self.xmlTagName, [MBCaseAction dataEntityName], self.xmlTagName, [container.simulatedXML stringByIndentingEachLineWithTab]);
+        MBLogError(@"<%@> actions may only come after <%@> actions; the <%@> declaration within this action block is unexpected and it will not be executed:\n%@", self.xmlTagName, [MBCaseAction dataEntityName], self.xmlTagName, [container.simulatedXML stringByIndentingEachLineWithTab]);
         return NO;
     }
 
@@ -200,7 +200,7 @@
             byListener:(nullable MBEventListener*)listener
              container:(nullable MBEventHandlerContainer*)container
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     [super eventReceived:event byListener:listener container:container];
 

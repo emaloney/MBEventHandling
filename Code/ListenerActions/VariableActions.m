@@ -42,7 +42,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
 
     NSString* name = [self evaluateAsString:kMBMLAttributeName];
     [self executeForVariableNamed:name];
@@ -94,7 +94,7 @@
 
 - (id) variableValue
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
 
     id value = [self stringValueOfAttribute:kMBMLAttributeValue];
     if (value) {
@@ -121,7 +121,7 @@
 
 - (void) executeForVariableNamed:(NSString*)varName
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
 
     id value = [self variableValue];
     [self executeForVariableNamed:varName value:value];
@@ -142,7 +142,7 @@
 
 - (id) variableValue
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
 
     BOOL value = NO;
     if ([self hasAttribute:kMBMLAttributeValue]) {
@@ -180,34 +180,34 @@
 
 - (void) executeForVariableNamed:(NSString*)varName value:(id)value
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     NSString* mapKeyRaw = [self stringValueOfAttribute:kMBMLAttributeMapKey];
     NSString* listIndexRaw = [self stringValueOfAttribute:kMBMLAttributeListIndex];
     if (mapKeyRaw) {
         NSString* mapKey = [MBExpression asString:mapKeyRaw];
         if (mapKey) {
-            if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@.%@ = %@: \"%@\"", self.xmlTagName, varName, mapKey, [value class], value);
+            if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@.%@ = %@: \"%@\"", self.xmlTagName, varName, mapKey, [value class], value);
             
             [[MBVariableSpace instance] setMapVariable:varName mapKey:mapKey value:value];
         }
         else {
-            errorLog(@"<%@> requires the expression specified in the mapKey attribute to evaluate to a string value; the expression \"%@\" evaluates to nil", self.xmlTagName, mapKeyRaw);
+            MBLogError(@"<%@> requires the expression specified in the mapKey attribute to evaluate to a string value; the expression \"%@\" evaluates to nil", self.xmlTagName, mapKeyRaw);
         }
     }
     else if (listIndexRaw) {
         NSNumber* listIndex = [MBExpression asNumber:listIndexRaw];
         if (listIndex) {
-            if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@[%@] = %@: \"%@\"", self.xmlTagName, varName, listIndex, [value class], value);
+            if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@[%@] = %@: \"%@\"", self.xmlTagName, varName, listIndex, [value class], value);
 
             [[MBVariableSpace instance] setListVariable:varName listIndex:[listIndex integerValue] value:value];
         }
         else {
-            errorLog(@"<%@> requires the expression specified in the listIndex attribute to evaluate to a numeric value; the expression \"%@\" evaluates to nil", self.xmlTagName, listIndexRaw);
+            MBLogError(@"<%@> requires the expression specified in the listIndex attribute to evaluate to a numeric value; the expression \"%@\" evaluates to nil", self.xmlTagName, listIndexRaw);
         }
     }
     else {
-        if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+        if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
         [MBVariableSpace instance][varName] = value;
     }   
@@ -228,9 +228,9 @@
 
 - (void) executeForVariableNamed:(NSString*)varName value:(id)value
 {
-    debugTrace();
+    MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [MBScopedVariables currentVariableScope][varName] = value;
 }
@@ -250,9 +250,9 @@
 
 - (void) executeForVariableNamed:(NSString*)varName value:(id)value
 {
-    debugTrace();
+    MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [MBScopedVariables currentVariableScope][varName] = value;
 }
@@ -272,9 +272,9 @@
 
 - (void) executeForVariableNamed:(NSString*)varName
 {
-    debugTrace();
+    MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@", self.xmlTagName, varName);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@", self.xmlTagName, varName);
 
     [[MBVariableSpace instance] unsetVariable:varName];
 }
@@ -294,9 +294,9 @@
 
 - (void) executeForVariableNamed:(NSString*)varName value:(id)value
 {
-    debugTrace();
+    MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [[MBVariableSpace instance] pushVariable:varName value:value];
 }
@@ -316,9 +316,9 @@
 
 - (void) executeForVariableNamed:(NSString*)varName
 {
-    debugTrace();
+    MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@", self.xmlTagName, varName);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@", self.xmlTagName, varName);
 
     [[MBVariableSpace instance] popVariable:varName];
 }
@@ -338,9 +338,9 @@
 
 - (void) executeForVariableNamed:(NSString*)varName value:(id)value
 {
-    debugTrace();
+    MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [MBVariableSpace instance][varName] = value;
 }
@@ -360,9 +360,9 @@
 
 - (void) executeForVariableNamed:(NSString*)varName value:(id)value
 {
-    debugTrace();
+    MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) consoleLog(@"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [[MBVariableSpace instance] pushVariable:varName value:value];
 }

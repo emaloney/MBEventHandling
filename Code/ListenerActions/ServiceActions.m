@@ -34,7 +34,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     NSString* clsName = [self evaluateAsString:kMBMLAttributeClass];
     if (clsName) {
@@ -44,11 +44,11 @@
             [self executeForService:svc named:clsName manager:mgr];
         }
         else {
-            errorLog(@"<%@> could not find a %@ named \"%@\" (from expression: %@) as specified by the \"%@\" attribute: %@", self.xmlTagName, NSStringFromProtocol(@protocol(MBService)), clsName, self[kMBMLAttributeClass], kMBMLAttributeClass, self.simulatedXML);
+            MBLogError(@"<%@> could not find a %@ named \"%@\" (from expression: %@) as specified by the \"%@\" attribute: %@", self.xmlTagName, NSStringFromProtocol(@protocol(MBService)), clsName, self[kMBMLAttributeClass], kMBMLAttributeClass, self.simulatedXML);
         }
     }
     else {
-        errorLog(@"<%@> requires the \"%@\" attribute to evaluate to the name of a %@; the expression \"%@\" evaluated to nil: %@", self.xmlTagName, kMBMLAttributeClass, NSStringFromProtocol(@protocol(MBService)), self[kMBMLAttributeClass], self.simulatedXML);
+        MBLogError(@"<%@> requires the \"%@\" attribute to evaluate to the name of a %@; the expression \"%@\" evaluated to nil: %@", self.xmlTagName, kMBMLAttributeClass, NSStringFromProtocol(@protocol(MBService)), self[kMBMLAttributeClass], self.simulatedXML);
     }
 }
 
@@ -76,7 +76,7 @@
                      named:(nonnull NSString*)svcName
                    manager:(nonnull MBServiceManager*)mgr
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [mgr attachToServiceClassNamed:svcName];
 }
@@ -98,7 +98,7 @@
                      named:(nonnull NSString*)svcName
                    manager:(nonnull MBServiceManager*)mgr
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [mgr detachFromServiceClassNamed:svcName];
 }

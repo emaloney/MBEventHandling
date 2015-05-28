@@ -39,7 +39,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     NSString* filePath = [self evaluateAsString:kMBMLAttributeFile];
     NSString* var = [self evaluateAsString:kMBMLAttributeVar];
@@ -59,7 +59,7 @@
             [MBVariableSpace instance][var] = varValue;
         }
         else {
-            errorLog(@"%@ failed to load %@; error: %@", [self class], filePath, err);
+            MBLogError(@"%@ failed to load %@; error: %@", [self class], filePath, err);
         }
     }
 }
@@ -88,7 +88,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     NSString* filePath = [self evaluateAsString:kMBMLAttributeFile];
     NSString* var = [self evaluateAsString:kMBMLAttributeVar];
@@ -98,7 +98,7 @@
         
         id value = [MBVariableSpace instance][var];
         if (!value) {
-            errorLog(@"Was asked to write the MBML variable %@ to file %@, but the variable is currently nil", var, filePath);
+            MBLogError(@"Was asked to write the MBML variable %@ to file %@, but the variable is currently nil", var, filePath);
         }
         else if ([value isKindOfClass:[NSData class]]) {
             NSData* data = (NSData*) value;
@@ -106,7 +106,7 @@
                            options:NSDataWritingAtomic
                              error:&err])
             {
-                errorLog(@"%@ error saving %@ to file: %@", [self class], [data class], err);
+                MBLogError(@"%@ error saving %@ to file: %@", [self class], [data class], err);
             }
         }
         else if ([var isKindOfClass:[NSString class]]) {
@@ -116,11 +116,11 @@
                          encoding:NSUTF8StringEncoding
                             error:&err])
             {
-                errorLog(@"%@ error saving %@ to file: %@", [self class], [str class], err);
+                MBLogError(@"%@ error saving %@ to file: %@", [self class], [str class], err);
             }
         }
         else {
-            errorLog(@"%@ doesn't know how to save a %@ to a file yet in %@", [self class], [value class], self.simulatedXML);
+            MBLogError(@"%@ doesn't know how to save a %@ to a file yet in %@", [self class], [value class], self.simulatedXML);
         }
     }
 }
@@ -149,7 +149,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     NSString* filePath = [self evaluateAsString:kMBMLAttributeFile];
     
@@ -157,7 +157,7 @@
     
     NSError* err = nil;
     if (![fileMgr removeItemAtPath:filePath error:&err]) {
-        errorLog(@"%@ error attempting to delete file: %@", [self class], err);
+        MBLogError(@"%@ error attempting to delete file: %@", [self class], err);
     }
 }
 
@@ -187,7 +187,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     NSString* srcPath = [self evaluateAsString:kMBMLAttributeFile];
     NSString* targetPath = [self evaluateAsString:kMBMLAttributeTarget];
@@ -196,7 +196,7 @@
 
     NSError* err = nil;
     if (![fileMgr createSymbolicLinkAtPath:srcPath withDestinationPath:targetPath error:&err]) {
-        errorLog(@"The <%@> action encountered an error trying to create symbolic link from <%@> to <%@>: %@", self.xmlTagName, srcPath, targetPath, err);
+        MBLogError(@"The <%@> action encountered an error trying to create symbolic link from <%@> to <%@>: %@", self.xmlTagName, srcPath, targetPath, err);
     }
 }
 

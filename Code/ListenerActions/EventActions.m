@@ -50,7 +50,7 @@
     if (event.userInfo) {
         [debugMsg appendFormat:@"; userInfo: %@", event.userInfo];
     }
-    debugLog(@"%@", debugMsg);
+    MBLogDebug(@"%@", debugMsg);
 #endif
     
     MBScopedVariables* scope = nil;

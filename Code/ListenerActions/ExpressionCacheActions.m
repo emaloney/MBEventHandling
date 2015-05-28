@@ -43,7 +43,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [[MBExpressionCache instance] clearCache];
 }
@@ -63,7 +63,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     [[MBExpressionCache instance] resetFilesystemCache];
 }
@@ -83,7 +83,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     [[MBExpressionCache instance] loadCache];
 }
@@ -103,7 +103,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
 
     [[MBExpressionCache instance] loadAndMergeCache];
 }
@@ -123,7 +123,7 @@
 
 - (void) executeForEvent:(nullable NSNotification*)event
 {
-    debugTrace();
+    MBLogDebugTrace();
     
     [[MBExpressionCache instance] saveCache];
 }

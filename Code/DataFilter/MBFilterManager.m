@@ -65,7 +65,7 @@ NSString* const kMBMLTagDataFilter            = @"DataFilter";
 
 - (BOOL) parseElement:(RXMLElement*)mbml forMatch:(NSString*)match
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
 
     NSString* tagName = mbml.tag;
     if ([tagName isEqualToString:kMBMLTagDataFilter]) {
@@ -74,7 +74,7 @@ NSString* const kMBMLTagDataFilter            = @"DataFilter";
             _namesToFilters[filter.name] = filter;
         }
         else {
-            errorLog(@"The following %@ did not validate and will be ignored: %@", tagName, mbml.xml);
+            MBLogError(@"The following %@ did not validate and will be ignored: %@", tagName, mbml.xml);
             return NO;
         }
     }
@@ -90,14 +90,14 @@ NSString* const kMBMLTagDataFilter            = @"DataFilter";
 
 - (nonnull NSArray*) filterNames
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
     
     return [_namesToFilters allKeys];
 }
 
 - (nullable MBDataFilter*) filterWithName:(nonnull NSString*)name
 {
-    verboseDebugTrace();
+    MBLogVerboseTrace();
     
     return _namesToFilters[name];
 }

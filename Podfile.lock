@@ -1,5 +1,5 @@
 PODS:
-  - MBDataEnvironment (1.1.0):
+  - MBDataEnvironment (1.0.8):
     - MBToolbox (~> 1.0.22)
     - RaptureXML@Gilt (~> 1.0.3)
   - MBToolbox (1.0.22):
@@ -126,20 +126,27 @@ PODS:
 DEPENDENCIES:
   - MBDataEnvironment (from `ssh://github.com/emaloney/MBDataEnvironment.git`, branch
     `nullability`)
+  - MBToolbox (from `ssh://github.com/emaloney/MBToolbox.git`, branch `nullability`)
 
 EXTERNAL SOURCES:
   MBDataEnvironment:
     :branch: nullability
     :git: ssh://github.com/emaloney/MBDataEnvironment.git
+  MBToolbox:
+    :branch: nullability
+    :git: ssh://github.com/emaloney/MBToolbox.git
 
 CHECKOUT OPTIONS:
   MBDataEnvironment:
-    :commit: 85b8c4b8ba809371907985120988daf53cd581eb
+    :commit: 6d1311b3f6dbfe0f6379224acebe780689970f3b
     :git: ssh://github.com/emaloney/MBDataEnvironment.git
+  MBToolbox:
+    :commit: 5217f01b0ceb32fec360d7863043e5717fcbba0b
+    :git: ssh://github.com/emaloney/MBToolbox.git
 
 SPEC CHECKSUMS:
-  MBDataEnvironment: 6eb619afca1820946869a1337d3b325a7cc6bdab
+  MBDataEnvironment: aed7ab31b96933cb98907c06a5a24ff6b450e52c
   MBToolbox: 05b6900c8241ce5fcb9d5a3af081ccb535f833bb
   RaptureXML@Gilt: ecc436aa7aca1ae9b1a4a4b5a19bc1175358b7f1
 
-COCOAPODS: 0.37.1
+COCOAPODS: 0.37.2
