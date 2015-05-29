@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MBFilterManager.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MBFilterManager</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>MBFilterManager.h</DeclaredIn>
+            
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilterManager/filterNames</TokenIdentifier>
+			<Abstract type="html">Returns an array of strings specifying the names of the MBDataFilter
+instances known to the receiver.</Abstract>
+			<DeclaredIn>MBFilterManager.h</DeclaredIn>
+			
+			<Declaration>- (nonnull NSArray *)filterNames</Declaration>
+			
+			<ReturnValue><Abstract type="html">The names of the filters.</Abstract></ReturnValue>
+			<Anchor>//api/name/filterNames</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MBFilterManager/filterWithName:</TokenIdentifier>
+			<Abstract type="html">Returns the MBDataFilter associated with the specified name.</Abstract>
+			<DeclaredIn>MBFilterManager.h</DeclaredIn>
+			
+			<Declaration>- (nullable MBDataFilter *)filterWithName:(nonnull NSString *)name</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>name</Name>
+					<Abstract type="html">The name of the data filter to return.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The data filter, or nil if there is no filter with the
+            specified name.</Abstract></ReturnValue>
+			<Anchor>//api/name/filterWithName:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
