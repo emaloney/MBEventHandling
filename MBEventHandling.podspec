@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
 	# Dependencies
 	#----------------------------------------------------------------
 
-	s.dependency 'MBToolbox', '~> 1.1.0'
-	s.dependency 'MBDataEnvironment', '~> 1.1.0'
+	s.dependency 'MBToolbox', '~> 1.1.7'
+	s.dependency 'MBDataEnvironment', '~> 1.1.10'
 
 end
