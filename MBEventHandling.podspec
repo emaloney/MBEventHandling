@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
 	s.homepage		= "https://github.com/emaloney/MBEventHandling"
 	s.license               = { :type => 'MIT', :file => 'LICENSE' }
 	s.author                = { "Evan Coyne Maloney" => "emaloney@gilt.com" }
-	s.platform              = :ios, '8.0'
-	s.ios.deployment_target = '7.0'
+	s.platform              = :ios, '9.0'
+	s.ios.deployment_target = '8.0'
 	s.requires_arc          = true
 
 	s.source = {
