@@ -4,4 +4,4 @@ source 'https://github.com/CocoaPods/Specs.git'
 # include Mockingbird dependencies
 #
 pod 'MBToolbox', '~> 1.1.7'
-pod 'MBDataEnvironment', '~> 1.1.10'
+pod 'MBDataEnvironment', '~> 1.1.16'

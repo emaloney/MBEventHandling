@@ -1,7 +1,7 @@
 PODS:
-  - MBDataEnvironment (1.1.10):
+  - MBDataEnvironment (1.1.16):
     - MBToolbox (~> 1.1.7)
-    - RaptureXML@Gilt (~> 1.0.4)
+    - RaptureXML@Gilt (~> 1.0.11)
   - MBToolbox (1.1.7):
     - MBToolbox/Assert (= 1.1.7)
     - MBToolbox/Availability (= 1.1.7)
@@ -123,15 +123,15 @@ PODS:
     - MBToolbox/Module
   - MBToolbox/ThreadsafeCache (1.1.7):
     - MBToolbox/Module
-  - RaptureXML@Gilt (1.0.4)
+  - RaptureXML@Gilt (1.0.11)
 
 DEPENDENCIES:
-  - MBDataEnvironment (~> 1.1.10)
+  - MBDataEnvironment (~> 1.1.16)
   - MBToolbox (~> 1.1.7)
 
 SPEC CHECKSUMS:
-  MBDataEnvironment: e73e502ce6839d7ba28fb9c9f3750e258bfd275d
+  MBDataEnvironment: cc16e314ab33da187be1739f08216fc061121a70
   MBToolbox: 9b35f5b67ff568b59e0aae6439f5b7b50a7db099
-  RaptureXML@Gilt: cfde4ff1694563d9e45e74640c0cd4f887f500ed
+  RaptureXML@Gilt: 4b6271a68aa150413726523835dbec367d94c9b1
 
 COCOAPODS: 0.39.0
