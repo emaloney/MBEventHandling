@@ -7,7 +7,7 @@
 //
 
 #import <RaptureXML/RXMLElement.h>
-#import <MBDataEnvironment/MBDataEnvironment.h>
+@import MBDataEnvironment;
 
 #import "MBFilterManager.h"
 #import "MBDataFilter.h"

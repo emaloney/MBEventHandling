@@ -26,7 +26,7 @@ FOUNDATION_EXPORT const unsigned char MBEventHandlingVersionString[];
 //
 
 // import headers from inherited modules
-#import <MBDataEnvironment/MBDataEnvironment.h>
+@import MBDataEnvironment;
 
 // import the public headers
 #import <MBEventHandling/MBDataFilter.h>
