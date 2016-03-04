@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		3B6D82DA1C89F90C00504542 /* MBDataEnvironment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B6D82C41C89F8A700504542 /* MBDataEnvironment.framework */; };
 		3BB792371A82A4D800A99387 /* MBEventHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB7922C1A82A4D800A99387 /* MBEventHandling.framework */; };
 		3BB792451A82A55700A99387 /* MBDataFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA87319DB07C500996B9F /* MBDataFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BB792461A82A55700A99387 /* MBFilterDataAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA87519DB07C500996B9F /* MBFilterDataAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,10 +53,37 @@
 		3BB792601A82A58100A99387 /* MBEventHandlingModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA89019DB07C500996B9F /* MBEventHandlingModule.m */; };
 		3BB792611A82A58100A99387 /* MBEventHandlingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */; };
 		3BB792621A82A5AF00A99387 /* MBEventHandlingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A97451A829F9A00D26D73 /* MBEventHandlingTests.m */; };
-		934A83B808DE01AC9C7D1DDF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC333028AB3230B662723DBE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3B6D82C31C89F8A700504542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6D82BC1C89F8A700504542 /* MBDataEnvironment.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BD23C6C1A65ED0E001F7869;
+			remoteInfo = "MBDataEnvironment iOS";
+		};
+		3B6D82C51C89F8A700504542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6D82BC1C89F8A700504542 /* MBDataEnvironment.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B58D66D1B3B515500C27D19;
+			remoteInfo = "MBDataEnvironment OSX";
+		};
+		3B6D82C71C89F8A700504542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6D82BC1C89F8A700504542 /* MBDataEnvironment.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BD23C761A65ED0F001F7869;
+			remoteInfo = MBDataEnvironmentTests;
+		};
+		3B6D82D81C89F90300504542 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B6D82BC1C89F8A700504542 /* MBDataEnvironment.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BD23C6B1A65ED0E001F7869;
+			remoteInfo = "MBDataEnvironment iOS";
+		};
 		3BB792381A82A4D800A99387 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3B8BA80519DA08DF00996B9F /* Project object */;
@@ -66,9 +94,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2ED845CADE6B7AE02703A0B5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3B0A97231A829E0B00D26D73 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		3B0A97451A829F9A00D26D73 /* MBEventHandlingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingTests.m; sourceTree = "<group>"; };
+		3B6D82BC1C89F8A700504542 /* MBDataEnvironment.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBDataEnvironment.xcodeproj; path = Libraries/MBDataEnvironment/MBDataEnvironment.xcodeproj; sourceTree = "<group>"; };
 		3B8BA87319DB07C500996B9F /* MBDataFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDataFilter.h; sourceTree = "<group>"; };
 		3B8BA87419DB07C500996B9F /* MBDataFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDataFilter.m; sourceTree = "<group>"; };
 		3B8BA87519DB07C500996B9F /* MBFilterDataAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFilterDataAction.h; sourceTree = "<group>"; };
@@ -100,7 +128,6 @@
 		3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingConstants.m; sourceTree = "<group>"; };
 		3BB7922C1A82A4D800A99387 /* MBEventHandling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBEventHandling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB792361A82A4D800A99387 /* MBEventHandlingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBEventHandlingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DEB2283DDF454AB8A00BE5F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC333028AB3230B662723DBE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				934A83B808DE01AC9C7D1DDF /* Pods.framework in Frameworks */,
+				3B6D82DA1C89F90C00504542 /* MBDataEnvironment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,15 +160,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3475D25DD3914A082A098AE8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2ED845CADE6B7AE02703A0B5 /* Pods.debug.xcconfig */,
-				4DEB2283DDF454AB8A00BE5F /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3B0A97441A829F9A00D26D73 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,13 +168,31 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		3B6D82BB1C89F89300504542 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3B6D82BC1C89F8A700504542 /* MBDataEnvironment.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		3B6D82BD1C89F8A700504542 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B6D82C41C89F8A700504542 /* MBDataEnvironment.framework */,
+				3B6D82C61C89F8A700504542 /* MBDataEnvironment.framework */,
+				3B6D82C81C89F8A700504542 /* MBDataEnvironmentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3B8BA80419DA08DF00996B9F = {
 			isa = PBXGroup;
 			children = (
 				3B8BA87119DB07C500996B9F /* Code */,
+				3B6D82BB1C89F89300504542 /* Libraries */,
 				3B0A97441A829F9A00D26D73 /* Tests */,
 				3B8BA80E19DA08DF00996B9F /* Products */,
-				3475D25DD3914A082A098AE8 /* Pods */,
 				30ED4FAC3C12CF8874309D0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -270,16 +306,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BB7923F1A82A4D800A99387 /* Build configuration list for PBXNativeTarget "MBEventHandling" */;
 			buildPhases = (
-				F06CD080E64591653CF29877 /* Check Pods Manifest.lock */,
 				3BB792271A82A4D800A99387 /* Sources */,
 				3BB792281A82A4D800A99387 /* Frameworks */,
 				3BB792291A82A4D800A99387 /* Headers */,
 				3BB7922A1A82A4D800A99387 /* Resources */,
-				F2EC35930EEAAE59CED569FA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3B6D82D91C89F90300504542 /* PBXTargetDependency */,
 			);
 			name = MBEventHandling;
 			productName = MBEventHandling;
@@ -334,6 +369,12 @@
 			mainGroup = 3B8BA80419DA08DF00996B9F;
 			productRefGroup = 3B8BA80E19DA08DF00996B9F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3B6D82BD1C89F8A700504542 /* Products */;
+					ProjectRef = 3B6D82BC1C89F8A700504542 /* MBDataEnvironment.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3BB7922B1A82A4D800A99387 /* MBEventHandling */,
@@ -342,6 +383,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3B6D82C41C89F8A700504542 /* MBDataEnvironment.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MBDataEnvironment.framework;
+			remoteRef = 3B6D82C31C89F8A700504542 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6D82C61C89F8A700504542 /* MBDataEnvironment.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MBDataEnvironment.framework;
+			remoteRef = 3B6D82C51C89F8A700504542 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B6D82C81C89F8A700504542 /* MBDataEnvironmentTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MBDataEnvironmentTests.xctest;
+			remoteRef = 3B6D82C71C89F8A700504542 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3BB7922A1A82A4D800A99387 /* Resources */ = {
@@ -373,36 +438,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$PROJECT_DIR/Pods/MBToolbox/BuildControl/public/buildMockingbirdDocumentation.sh --module \"Event Handling Module\"";
-		};
-		F06CD080E64591653CF29877 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F2EC35930EEAAE59CED569FA /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -439,6 +474,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3B6D82D91C89F90300504542 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "MBDataEnvironment iOS";
+			targetProxy = 3B6D82D81C89F90300504542 /* PBXContainerItemProxy */;
+		};
 		3BB792391A82A4D800A99387 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3BB7922B1A82A4D800A99387 /* MBEventHandling */;
@@ -537,7 +577,6 @@
 		};
 		3BB792401A82A4D800A99387 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ED845CADE6B7AE02703A0B5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -564,7 +603,6 @@
 		};
 		3BB792411A82A4D800A99387 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DEB2283DDF454AB8A00BE5F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
