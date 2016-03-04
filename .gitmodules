@@ -1,0 +1,3 @@
+[submodule "Libraries/MBDataEnvironment"]
+	path = Libraries/MBDataEnvironment
+	url = git@github.com:emaloney/MBDataEnvironment.git
