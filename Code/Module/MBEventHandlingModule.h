@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
-#import <MBToolbox/MBModule.h>
-
 #import "MBEventHandlingConstants.h"
 #import "MBListenerManager.h"
 #import "MBFilterManager.h"
+
+@import MBToolbox.MBModule;
 
 /******************************************************************************/
 #pragma mark -

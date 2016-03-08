@@ -6,7 +6,8 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import <MBToolbox/MBServiceManager.h>
+@import MBToolbox;
+@import MBDataEnvironment;
 
 #import "ServiceActions.h"
 
@@ -53,7 +54,7 @@
 }
 
 - (void) executeForService:(nonnull MBService*)svc
-                     named:(nonnull NSString*)svcName
+                     named:(nonnull NSObject<MBService>*)svcName
                    manager:(nonnull MBServiceManager*)mgr
 {
     MBErrorNotImplemented();

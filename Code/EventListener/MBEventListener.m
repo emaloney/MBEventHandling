@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import <RaptureXML/RXMLElement.h>
-#import <MBDataEnvironment/MBDataEnvironment.h>
+@import RaptureXML;
+@import MBToolbox;
+@import MBDataEnvironment;
 
 #import "MBEventListener.h"
 #import "FlowControlActions.h"

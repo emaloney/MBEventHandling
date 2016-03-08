@@ -52,7 +52,6 @@
 		3BB792601A82A58100A99387 /* MBEventHandlingModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA89019DB07C500996B9F /* MBEventHandlingModule.m */; };
 		3BB792611A82A58100A99387 /* MBEventHandlingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */; };
 		3BB792621A82A5AF00A99387 /* MBEventHandlingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A97451A829F9A00D26D73 /* MBEventHandlingTests.m */; };
-		934A83B808DE01AC9C7D1DDF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC333028AB3230B662723DBE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2ED845CADE6B7AE02703A0B5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3B0A97231A829E0B00D26D73 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		3B0A97451A829F9A00D26D73 /* MBEventHandlingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingTests.m; sourceTree = "<group>"; };
 		3B8BA87319DB07C500996B9F /* MBDataFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDataFilter.h; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 		3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingConstants.m; sourceTree = "<group>"; };
 		3BB7922C1A82A4D800A99387 /* MBEventHandling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBEventHandling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB792361A82A4D800A99387 /* MBEventHandlingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBEventHandlingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DEB2283DDF454AB8A00BE5F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EC333028AB3230B662723DBE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				934A83B808DE01AC9C7D1DDF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,15 +129,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3475D25DD3914A082A098AE8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2ED845CADE6B7AE02703A0B5 /* Pods.debug.xcconfig */,
-				4DEB2283DDF454AB8A00BE5F /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3B0A97441A829F9A00D26D73 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +143,6 @@
 				3B8BA87119DB07C500996B9F /* Code */,
 				3B0A97441A829F9A00D26D73 /* Tests */,
 				3B8BA80E19DA08DF00996B9F /* Products */,
-				3475D25DD3914A082A098AE8 /* Pods */,
 				30ED4FAC3C12CF8874309D0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -270,12 +256,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BB7923F1A82A4D800A99387 /* Build configuration list for PBXNativeTarget "MBEventHandling" */;
 			buildPhases = (
-				F06CD080E64591653CF29877 /* Check Pods Manifest.lock */,
 				3BB792271A82A4D800A99387 /* Sources */,
 				3BB792281A82A4D800A99387 /* Frameworks */,
 				3BB792291A82A4D800A99387 /* Headers */,
 				3BB7922A1A82A4D800A99387 /* Resources */,
-				F2EC35930EEAAE59CED569FA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,36 +357,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "$PROJECT_DIR/Pods/MBToolbox/BuildControl/public/buildMockingbirdDocumentation.sh --module \"Event Handling Module\"";
-		};
-		F06CD080E64591653CF29877 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F2EC35930EEAAE59CED569FA /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -537,7 +491,6 @@
 		};
 		3BB792401A82A4D800A99387 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ED845CADE6B7AE02703A0B5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -564,7 +517,6 @@
 		};
 		3BB792411A82A4D800A99387 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DEB2283DDF454AB8A00BE5F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

@@ -12,7 +12,7 @@
 
 #else
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 //! Project version number for MBEventHandling.
 FOUNDATION_EXPORT double MBEventHandlingVersionNumber;
@@ -24,11 +24,6 @@ FOUNDATION_EXPORT const unsigned char MBEventHandlingVersionString[];
 // NOTE: This header file is indended for external use. It should *not* be
 //       included from within code in the Mockingbird Event Handling module.
 //
-
-// import headers from inherited modules
-#import <MBDataEnvironment/MBDataEnvironment.h>
-
-// import the public headers
 #import <MBEventHandling/MBDataFilter.h>
 #import <MBEventHandling/MBFilterDataAction.h>
 #import <MBEventHandling/MBFilterManager.h>
