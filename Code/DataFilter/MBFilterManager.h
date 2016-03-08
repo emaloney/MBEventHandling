@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 Gilt Groupe. All rights reserved.
 //
 
-@import MBDataEnvironment;
+@import MBToolbox.MBSingleton;
+@import MBDataEnvironment.MBEnvironmentLoader;
 
 @class MBDataFilter;
 

@@ -6,9 +6,8 @@
 //  Copyright (c) 2012 Gilt Groupe. All rights reserved.
 //
 
-@import MBDataEnvironment;
-
 @class MBEventListener;
+@protocol MBInstanceVendor;
 
 /******************************************************************************/
 #pragma mark Constants

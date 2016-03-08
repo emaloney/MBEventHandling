@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-#import <MBToolbox/MBService.h>
-
 #import "MBEventListener.h"
 
+@protocol MBService;
 @class MBServiceManager;
+@class MBServiceActionBase;
 
 /******************************************************************************/
 #pragma mark -
@@ -22,7 +22,7 @@
  by the `MBServiceManager`.
  */
 @interface MBServiceActionBase : MBExecutableListenerAction
-- (void) executeForService:(nonnull MBService*)svc
+- (void) executeForService:(nonnull NSObject<MBService>*)svc
                      named:(nonnull NSString*)svcName
                    manager:(nonnull MBServiceManager*)mgr;
 @end
