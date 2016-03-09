@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Gilt Groupe. All rights reserved.
 //
 
-@import MBToolbox;
-@import MBDataEnvironment;
+#import <MBToolbox/MBToolbox.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 #import "MBFilterDataAction.h"
 #import "MBDataFilter.h"

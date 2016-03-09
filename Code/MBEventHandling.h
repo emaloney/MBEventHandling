@@ -12,7 +12,16 @@
 
 #else
 
-@import Foundation;
+#import <Foundation/Foundation.h>
+
+#if MB_BUILD_IOS
+#import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
+
+#import <MBToolbox/MBToolbox.h>
+#import <MBDataEnvironment/MBDataEnvironment.h>
 
 //! Project version number for MBEventHandling.
 FOUNDATION_EXPORT double MBEventHandlingVersionNumber;

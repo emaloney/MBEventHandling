@@ -6,7 +6,7 @@
 //  Copyright (c) 2009 Gilt Groupe. All rights reserved.
 //
 
-@import MBDataEnvironment;
+#import <MBDataEnvironment/MBDataModel.h>
 
 /******************************************************************************/
 #pragma mark -
