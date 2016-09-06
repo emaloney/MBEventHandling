@@ -1,0 +1,4 @@
+github "emaloney/MBToolbox" "carthage"
+github "emaloney/MBDataEnvironment" "carthage"
+github "emaloney/RaptureXML" "framework"
+

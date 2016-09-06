@@ -5,6 +5,12 @@
       location = "group:MBEventHandling.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:Carthage/Checkouts/MBDataEnvironment/MBDataEnvironment.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/MBToolbox/MBToolbox.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/RaptureXML/RaptureXML.xcodeproj">
    </FileRef>
 </Workspace>
