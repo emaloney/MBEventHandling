@@ -1,4 +1,1 @@
-github "emaloney/MBToolbox" "carthage"
-github "emaloney/MBDataEnvironment" "carthage"
-github "emaloney/RaptureXML" "framework"
-
+github "emaloney/MBDataEnvironment" ~> 2.0.1
