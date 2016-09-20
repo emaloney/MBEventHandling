@@ -13,5 +13,5 @@ install:
   gem install xcpretty
 
 script:
-- set -o pipefail && xcodebuild -workspace MBEventHandling.xcworkspace -scheme 'MBEventHandling' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' clean build | xcpretty
-- set -o pipefail && xcodebuild -workspace MBEventHandling.xcworkspace -scheme 'MBEventHandling' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' test | xcpretty
+- set -o pipefail && xcodebuild -workspace MBEventHandling.xcworkspace -scheme 'MBEventHandling' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' -destination-timeout 120 clean build | xcpretty
+- set -o pipefail && xcodebuild -workspace MBEventHandling.xcworkspace -scheme 'MBEventHandling' -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 7' -destination-timeout 120 test | xcpretty
