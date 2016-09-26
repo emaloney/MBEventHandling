@@ -187,7 +187,7 @@
     if (mapKeyRaw) {
         NSString* mapKey = [MBExpression asString:mapKeyRaw];
         if (mapKey) {
-            if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@.%@ = %@: \"%@\"", self.xmlTagName, varName, mapKey, [value class], value);
+            if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@.%@ = %@: \"%@\"", self.xmlTagName, varName, mapKey, [value class], value);
             
             [[MBVariableSpace instance] setMapVariable:varName mapKey:mapKey value:value];
         }
@@ -198,7 +198,7 @@
     else if (listIndexRaw) {
         NSNumber* listIndex = [MBExpression asNumber:listIndexRaw];
         if (listIndex) {
-            if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@[%@] = %@: \"%@\"", self.xmlTagName, varName, listIndex, [value class], value);
+            if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@[%@] = %@: \"%@\"", self.xmlTagName, varName, listIndex, [value class], value);
 
             [[MBVariableSpace instance] setListVariable:varName listIndex:[listIndex integerValue] value:value];
         }
@@ -207,7 +207,7 @@
         }
     }
     else {
-        if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+        if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
         [MBVariableSpace instance][varName] = value;
     }   
@@ -230,7 +230,7 @@
 {
     MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [MBScopedVariables currentVariableScope][varName] = value;
 }
@@ -252,7 +252,7 @@
 {
     MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [MBScopedVariables currentVariableScope][varName] = value;
 }
@@ -274,7 +274,7 @@
 {
     MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@", self.xmlTagName, varName);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@", self.xmlTagName, varName);
 
     [[MBVariableSpace instance] unsetVariable:varName];
 }
@@ -296,7 +296,7 @@
 {
     MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [[MBVariableSpace instance] pushVariable:varName value:value];
 }
@@ -318,7 +318,7 @@
 {
     MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@", self.xmlTagName, varName);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@", self.xmlTagName, varName);
 
     [[MBVariableSpace instance] popVariable:varName];
 }
@@ -340,7 +340,7 @@
 {
     MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [MBVariableSpace instance][varName] = value;
 }
@@ -362,7 +362,7 @@
 {
     MBLogDebugTrace();
 
-    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBModuleLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
+    if (DEBUG_FLAG(DEBUG_VALUES)) MBLog(MBLogSeverityDebug, @"%@: %@ = %@: \"%@\"", self.xmlTagName, varName, [value class], value);
 
     [[MBVariableSpace instance] pushVariable:varName value:value];
 }
