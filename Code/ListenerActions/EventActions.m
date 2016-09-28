@@ -26,7 +26,7 @@
 
 + (nullable NSSet*) requiredAttributes
 {
-    return [NSSet setWithObject:kMBMLAttributeName];
+    return [NSSet setWithObjects:kMBMLAttributeName, kMBMLAttributeObject, nil];
 }
 
 - (BOOL) acceptsArbitraryAttributes
@@ -55,9 +55,13 @@
     
     MBScopedVariables* scope = nil;
     if (self.countAttributes > 1) {
-        NSSet* standardEventAttrs = [MBListenerAction supportedAttributes];
+        NSMutableSet* mutableStdAttrs = [[[self class] requiredAttributes] mutableCopy];
+        [mutableStdAttrs unionSet:[[self class] supportedAttributes]];
+        [mutableStdAttrs minusSet:[[self class] unsupportedAttributes]];
+        NSSet* stdAttrs = [mutableStdAttrs copy];
+
         for (NSString* attrName in [self attributeNames]) {
-            if (![attrName isEqualToString:kMBMLAttributeName] && ![standardEventAttrs containsObject:attrName]) {
+            if (![stdAttrs containsObject:attrName]) {
                 if (!scope) {
                     scope = [MBScopedVariables new];
                 }
@@ -65,10 +69,11 @@
             }
         }
     }
-    
-    id sender = event.object;
-    if (sender) {
-        [MBEvents postEvent:eventName fromSender:sender];
+
+    id object = [self evaluateAsObject:kMBMLAttributeObject];
+    object = object ? object : event.object;
+    if (object) {
+        [MBEvents postEvent:eventName withObject:object];
     } else {
         [MBEvents postEvent:eventName];
     }
