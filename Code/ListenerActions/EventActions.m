@@ -26,7 +26,12 @@
 
 + (nullable NSSet*) requiredAttributes
 {
-    return [NSSet setWithObjects:kMBMLAttributeName, kMBMLAttributeObject, nil];
+    return [NSSet setWithObject:kMBMLAttributeName];
+}
+
++ (nullable NSSet*) supportedAttributes
+{
+    return [NSSet setWithObject:kMBMLAttributeObject];
 }
 
 - (BOOL) acceptsArbitraryAttributes
