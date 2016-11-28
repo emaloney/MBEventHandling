@@ -149,9 +149,9 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
 
         traceBlock = [handler isKindOfClass:[MBEventHandlerContainer class]];
         if (traceBlock) {
-            NSLog(@"--> %@ -- Entered <%@> block%@:\n%@", traceID, handler.xmlTagName, delayStr, [handler.simulatedXML stringByIndentingEachLineWithTab]);
+            MBLogInfo(@"--> %@ -- Entered <%@> block%@:\n%@", traceID, handler.xmlTagName, delayStr, [handler.simulatedXML stringByIndentingEachLineWithTab]);
         } else {
-            NSLog(@"--> %@ -- Executing%@: %@", traceID, delayStr, handler.simulatedXML);
+            MBLogInfo(@"--> %@ -- Executing%@: %@", traceID, delayStr, handler.simulatedXML);
         }
     }
 
@@ -164,11 +164,11 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
         [handler eventReceived:event byListener:listener container:container];
 
         if (traceBlock) {
-            NSLog(@"--> %@ -- Exited <%@> block.", traceID, handler.xmlTagName);
+            MBLogInfo(@"--> %@ -- Exited <%@> block.", traceID, handler.xmlTagName);
         }
 
         if (DEBUG_FLAG(DEBUG_TRACE_PROFILE_ACTIONS) && trace) {
-            NSLog(@"--> %@ -- Finished executing <%@> action in %g seconds", traceID, handler.xmlTagName, [NSDate timeIntervalSinceReferenceDate] - executionStartTime);
+            MBLogInfo(@"--> %@ -- Finished executing <%@> action in %g seconds", traceID, handler.xmlTagName, [NSDate timeIntervalSinceReferenceDate] - executionStartTime);
         }
     }
     @catch (NSException* ex) {
@@ -212,14 +212,14 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
                 // because actions executed after a delay can't affect flow
                 if (self.flowControlState == MBFlowControlStateBreak) {
                     if (traceThis) {
-                        NSLog(@"--> Skipping further actions in this block due to: %@", handler.simulatedXML);
+                        MBLogInfo(@"--> Skipping further actions in this block due to: %@", handler.simulatedXML);
                     }
                     return;
                 }
             }
             else {
                 if (traceThis) {
-                    NSLog(@"--> %@ -- Will execute after %g second delay: %@", traceID, delay, self.simulatedXML);
+                    MBLogInfo(@"--> %@ -- Will execute after %g second delay: %@", traceID, delay, self.simulatedXML);
                 }
 
                 dispatch_time_t execTime = dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC);
@@ -236,9 +236,9 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
             if (traceThis) {
                 BOOL isBlock = [handler isKindOfClass:[MBEventHandlerContainer class]];
                 if (!isBlock) {
-                    NSLog(@"--> %@ -- Skipping: %@", traceID, handler.simulatedXML);
+                    MBLogInfo(@"--> %@ -- Skipping: %@", traceID, handler.simulatedXML);
                 } else {
-                    NSLog(@"--> %@ -- Skipping <%@> block:\n%@", traceID, handler.xmlTagName, [handler.simulatedXML stringByIndentingEachLineWithTab]);
+                    MBLogInfo(@"--> %@ -- Skipping <%@> block:\n%@", traceID, handler.xmlTagName, [handler.simulatedXML stringByIndentingEachLineWithTab]);
                 }
             }
         }
@@ -431,7 +431,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
         // contain expressions referencing those variables
         if ([self shouldHandleEvent:event receivedByListener:self container:self]) {
             if (self.traceExecution) {
-                NSLog(@"--> Event \"%@\" received; triggering listener:\n%@", event.name, [self.simulatedXML stringByIndentingEachLineWithTab]);
+                MBLogInfo(@"--> Event \"%@\" received; triggering listener:\n%@", event.name, [self.simulatedXML stringByIndentingEachLineWithTab]);
             }
             [self eventReceived:event byListener:self container:self];
         } else {
@@ -446,7 +446,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
     }
 
     if (self.traceExecution && !ignoring) {
-        NSLog(@"--> Listener \"%@\" done processing actions for \"%@\" in %g seconds", _name, event.name, [NSDate timeIntervalSinceReferenceDate] - listenerStartTime);
+        MBLogInfo(@"--> Listener \"%@\" done processing actions for \"%@\" in %g seconds", _name, event.name, [NSDate timeIntervalSinceReferenceDate] - listenerStartTime);
     }
 }
 
@@ -589,13 +589,13 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
             NSString* expr = [self stringValueOfAttribute:key];
             id val = [expr evaluateAsObject];
             if ([val isKindOfClass:[NSString class]]) {
-                NSLog(@"\n\t--> <%@>: %@ resolves to %lu-char string: %@\n", self.xmlTagName, key, (unsigned long)((NSString*)val).length, val);
+                MBLogInfo(@"\n\t--> <%@>: %@ resolves to %lu-char string: %@\n", self.xmlTagName, key, (unsigned long)((NSString*)val).length, val);
             }
             else if (val) {
-                NSLog(@"\n\t--> <%@>: %@ resolves to %@: %@\n", self.xmlTagName, key, [val class], [val description]);
+                MBLogInfo(@"\n\t--> <%@>: %@ resolves to %@: %@\n", self.xmlTagName, key, [val class], [val description]);
             }
             else {
-                NSLog(@"\n\t--> <%@>: %@ resolves to null value\n", self.xmlTagName, key);
+                MBLogInfo(@"\n\t--> <%@>: %@ resolves to null value\n", self.xmlTagName, key);
             }
         }
     }
@@ -605,7 +605,7 @@ NSString* const kMBEventListenerTraceActionsVariable    = @"Debug:traceActions";
         NSString* msg = [NSString stringWithFormat:@"caused by: %@", self.simulatedXML];
         MBTriggerDebugBreakMsg(msg);
 #else
-        NSLog(@"--> Using a %@ action to enter the debugger is only supported in debug builds.", self.xmlTagName);
+        MBLogInfo(@"--> Using a %@ action to enter the debugger is only supported in debug builds.", self.xmlTagName);
 #endif
     }
 }
