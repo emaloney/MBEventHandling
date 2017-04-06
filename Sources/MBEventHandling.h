@@ -16,9 +16,9 @@
 
 #import <MBToolbox/MBToolbox.h>
 
-#if MB_BUILD_IOS
+#if MB_BUILD_UIKIT
 #import <UIKit/UIKit.h>
-#else
+#elif MB_BUILD_MACOS
 #import <AppKit/AppKit.h>
 #endif
 
