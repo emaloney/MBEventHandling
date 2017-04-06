@@ -127,7 +127,9 @@
         NSURL* url = [NSURL URLWithString:urlStr];
         BOOL canOpen = NO;
         if (url) {
+#if MB_BUILD_UIKIT
             canOpen = [[UIApplication sharedApplication] canOpenURL:url];
+#endif
         }
         else {
             MBLogError(@"The <%@> could not interpret the value of the %@ attribute (\"%@\" from expression: \"%@\") as a valid URL", self.xmlTagName, kMBMLAttributeURL, [self evaluateAsString:kMBMLAttributeURL], self[kMBMLAttributeURL]);
