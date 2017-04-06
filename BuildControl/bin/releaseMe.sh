@@ -463,7 +463,7 @@ fi
 #
 # determine build settings
 #
-PROJECT_SPECIFIER="-project MBEventHandling.xcodeproj"
+PROJECT_SPECIFIER="-workspace MBEventHandling.xcworkspace"
 COMPILE_PLATFORMS="iOS macOS tvOS watchOS"
 PROJECT_NAME="MBEventHandling"
 

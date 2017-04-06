@@ -55,7 +55,7 @@ while [[ $THIS_TRY < $MAXIMUM_TRIES ]]; do
 		echo "Attempt $THIS_TRY of $MAXIMUM_TRIES..."
 	fi
 	
-	( set -o pipefail && xcodebuild -project MBEventHandling.xcodeproj -configuration Debug -scheme "MBEventHandling" -destination "$DESTINATION" -destination-timeout 300 $XCODE_ACTION 2>&1 | tee "MBEventHandling-$PLATFORM-$OPERATION.log" | xcpretty )
+	( set -o pipefail && xcodebuild -workspace MBEventHandling.xcworkspace -configuration Debug -scheme "MBEventHandling" -destination "$DESTINATION" -destination-timeout 300 $XCODE_ACTION 2>&1 | tee "MBEventHandling-$PLATFORM-$OPERATION.log" | xcpretty )
 	XCODE_RESULT="${PIPESTATUS[0]}"
 	if [[ "$XCODE_RESULT" == "0" ]]; then
 		rm "MBEventHandling-$PLATFORM-$OPERATION.log"
