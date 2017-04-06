@@ -36,7 +36,7 @@ The simplest way to integrate MBEventHandling is with the [Carthage](https://git
 First, add this line to your [`Cartfile`](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile):
 
 ```
-github "emaloney/MBEventHandling" ~> 0.0.0
+github "emaloney/MBEventHandling" ~> 3.0.0
 ```
 
 Then, use the `carthage` command to [update your dependencies](https://github.com/Carthage/Carthage#upgrading-frameworks).
