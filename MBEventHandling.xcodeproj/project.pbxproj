@@ -6,288 +6,284 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		3B0A971F1A829BE700D26D73 /* MBEventHandlingDocumentation */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 3B0A97201A829BE700D26D73 /* Build configuration list for PBXAggregateTarget "MBEventHandlingDocumentation" */;
-			buildPhases = (
-				3BB792631A82A7DA00A99387 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = MBEventHandlingDocumentation;
-			productName = MBEventHandlingDocumentation;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		3BB166A71D8C6BB70004A0E9 /* MBDataEnvironment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB166A61D8C6BB70004A0E9 /* MBDataEnvironment.framework */; };
-		3BB166A91D8C6BBD0004A0E9 /* RaptureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB166A81D8C6BBD0004A0E9 /* RaptureXML.framework */; };
-		3BB166AB1D8C6BC30004A0E9 /* MBToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB166AA1D8C6BC30004A0E9 /* MBToolbox.framework */; };
-		3BB792371A82A4D800A99387 /* MBEventHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB7922C1A82A4D800A99387 /* MBEventHandling.framework */; };
-		3BB792451A82A55700A99387 /* MBDataFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA87319DB07C500996B9F /* MBDataFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB792461A82A55700A99387 /* MBFilterDataAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA87519DB07C500996B9F /* MBFilterDataAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB792471A82A55700A99387 /* MBFilterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA87719DB07C500996B9F /* MBFilterManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB792481A82A55700A99387 /* MBEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA87A19DB07C500996B9F /* MBEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB792491A82A55700A99387 /* MBListenerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA87C19DB07C500996B9F /* MBListenerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB7924A1A82A55700A99387 /* EnvironmentActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA87F19DB07C500996B9F /* EnvironmentActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB7924B1A82A55700A99387 /* EventActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA88119DB07C500996B9F /* EventActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB7924C1A82A55700A99387 /* ExpressionCacheActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA88319DB07C500996B9F /* ExpressionCacheActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB7924D1A82A55700A99387 /* FileActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA88519DB07C500996B9F /* FileActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB7924E1A82A55700A99387 /* FlowControlActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA88719DB07C500996B9F /* FlowControlActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB7924F1A82A55700A99387 /* ServiceActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA88919DB07C500996B9F /* ServiceActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB792501A82A55700A99387 /* VariableActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA88B19DB07C500996B9F /* VariableActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB792511A82A55700A99387 /* MBEventHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA88D19DB07C500996B9F /* MBEventHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB792521A82A55700A99387 /* MBEventHandlingModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA88F19DB07C500996B9F /* MBEventHandlingModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB792531A82A55700A99387 /* MBEventHandlingConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B8BA89119DB07C500996B9F /* MBEventHandlingConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BB792541A82A58100A99387 /* MBDataFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA87419DB07C500996B9F /* MBDataFilter.m */; };
-		3BB792551A82A58100A99387 /* MBFilterDataAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA87619DB07C500996B9F /* MBFilterDataAction.m */; };
-		3BB792561A82A58100A99387 /* MBFilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA87819DB07C500996B9F /* MBFilterManager.m */; };
-		3BB792571A82A58100A99387 /* MBEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA87B19DB07C500996B9F /* MBEventListener.m */; };
-		3BB792581A82A58100A99387 /* MBListenerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA87D19DB07C500996B9F /* MBListenerManager.m */; };
-		3BB792591A82A58100A99387 /* EnvironmentActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88019DB07C500996B9F /* EnvironmentActions.m */; };
-		3BB7925A1A82A58100A99387 /* EventActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88219DB07C500996B9F /* EventActions.m */; };
-		3BB7925B1A82A58100A99387 /* ExpressionCacheActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88419DB07C500996B9F /* ExpressionCacheActions.m */; };
-		3BB7925C1A82A58100A99387 /* FileActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88619DB07C500996B9F /* FileActions.m */; };
-		3BB7925D1A82A58100A99387 /* FlowControlActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88819DB07C500996B9F /* FlowControlActions.m */; };
-		3BB7925E1A82A58100A99387 /* ServiceActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88A19DB07C500996B9F /* ServiceActions.m */; };
-		3BB7925F1A82A58100A99387 /* VariableActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA88C19DB07C500996B9F /* VariableActions.m */; };
-		3BB792601A82A58100A99387 /* MBEventHandlingModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA89019DB07C500996B9F /* MBEventHandlingModule.m */; };
-		3BB792611A82A58100A99387 /* MBEventHandlingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */; };
-		3BB792621A82A5AF00A99387 /* MBEventHandlingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A97451A829F9A00D26D73 /* MBEventHandlingTests.m */; };
-		3BEA9C471D7F6DA500A87B4C /* MBDataEnvironment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEA9C441D7F6DA500A87B4C /* MBDataEnvironment.framework */; };
-		3BEA9C481D7F6DA500A87B4C /* MBToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEA9C451D7F6DA500A87B4C /* MBToolbox.framework */; };
-		3BEA9C491D7F6DA500A87B4C /* RaptureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEA9C461D7F6DA500A87B4C /* RaptureXML.framework */; };
+		3B90590D1DAECB5200B4EEC0 /* MBEventHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9059031DAECB5200B4EEC0 /* MBEventHandling.framework */; };
+		3BEF0FCF1E966B1000067E4C /* MBDataFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FAE1E966B1000067E4C /* MBDataFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FD01E966B1000067E4C /* MBDataFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FAF1E966B1000067E4C /* MBDataFilter.m */; };
+		3BEF0FD11E966B1000067E4C /* MBFilterDataAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FB01E966B1000067E4C /* MBFilterDataAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FD21E966B1000067E4C /* MBFilterDataAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FB11E966B1000067E4C /* MBFilterDataAction.m */; };
+		3BEF0FD31E966B1000067E4C /* MBFilterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FB21E966B1000067E4C /* MBFilterManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FD41E966B1000067E4C /* MBFilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FB31E966B1000067E4C /* MBFilterManager.m */; };
+		3BEF0FD51E966B1000067E4C /* MBEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FB51E966B1000067E4C /* MBEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FD61E966B1000067E4C /* MBEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FB61E966B1000067E4C /* MBEventListener.m */; };
+		3BEF0FD71E966B1000067E4C /* MBListenerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FB71E966B1000067E4C /* MBListenerManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FD81E966B1000067E4C /* MBListenerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FB81E966B1000067E4C /* MBListenerManager.m */; };
+		3BEF0FD91E966B1000067E4C /* EnvironmentActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FBA1E966B1000067E4C /* EnvironmentActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FDA1E966B1000067E4C /* EnvironmentActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FBB1E966B1000067E4C /* EnvironmentActions.m */; };
+		3BEF0FDB1E966B1000067E4C /* EventActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FBC1E966B1000067E4C /* EventActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FDC1E966B1000067E4C /* EventActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FBD1E966B1000067E4C /* EventActions.m */; };
+		3BEF0FDD1E966B1000067E4C /* ExpressionCacheActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FBE1E966B1000067E4C /* ExpressionCacheActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FDE1E966B1000067E4C /* ExpressionCacheActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FBF1E966B1000067E4C /* ExpressionCacheActions.m */; };
+		3BEF0FDF1E966B1000067E4C /* FileActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FC01E966B1000067E4C /* FileActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FE01E966B1000067E4C /* FileActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FC11E966B1000067E4C /* FileActions.m */; };
+		3BEF0FE11E966B1000067E4C /* FlowControlActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FC21E966B1000067E4C /* FlowControlActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FE21E966B1000067E4C /* FlowControlActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FC31E966B1000067E4C /* FlowControlActions.m */; };
+		3BEF0FE31E966B1000067E4C /* ServiceActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FC41E966B1000067E4C /* ServiceActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FE41E966B1000067E4C /* ServiceActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FC51E966B1000067E4C /* ServiceActions.m */; };
+		3BEF0FE51E966B1000067E4C /* VariableActions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FC61E966B1000067E4C /* VariableActions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FE61E966B1000067E4C /* VariableActions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FC71E966B1000067E4C /* VariableActions.m */; };
+		3BEF0FE71E966B1000067E4C /* MBEventHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FC81E966B1000067E4C /* MBEventHandling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FE81E966B1000067E4C /* MBEventHandlingConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FCA1E966B1000067E4C /* MBEventHandlingConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FE91E966B1000067E4C /* MBEventHandlingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FCB1E966B1000067E4C /* MBEventHandlingConstants.m */; };
+		3BEF0FEA1E966B1000067E4C /* MBEventHandlingModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BEF0FCC1E966B1000067E4C /* MBEventHandlingModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BEF0FEB1E966B1000067E4C /* MBEventHandlingModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FCD1E966B1000067E4C /* MBEventHandlingModule.m */; };
+		3BEF0FEF1E966B1D00067E4C /* MBEventHandlingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEF0FEE1E966B1D00067E4C /* MBEventHandlingTests.m */; };
+		3BEF0FF41E966DE500067E4C /* MBDataEnvironment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEF0FF11E966DE500067E4C /* MBDataEnvironment.framework */; };
+		3BEF0FF51E966DE500067E4C /* MBToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEF0FF21E966DE500067E4C /* MBToolbox.framework */; };
+		3BEF0FF61E966DE500067E4C /* RaptureXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BEF0FF31E966DE500067E4C /* RaptureXML.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3BB792381A82A4D800A99387 /* PBXContainerItemProxy */ = {
+		3B90590E1DAECB5200B4EEC0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B8BA80519DA08DF00996B9F /* Project object */;
+			containerPortal = 3B9058FA1DAECB5200B4EEC0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3BB7922B1A82A4D800A99387;
+			remoteGlobalIDString = 3B9059021DAECB5200B4EEC0;
 			remoteInfo = MBEventHandling;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B0A97231A829E0B00D26D73 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
-		3B0A97451A829F9A00D26D73 /* MBEventHandlingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingTests.m; sourceTree = "<group>"; };
-		3B1FB42C1D7F214C001A099E /* MBToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBToolbox.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Gilt-ertfwablfdbghreppztdbsiiyqli/Build/Products/Release-iphonesimulator/MBToolbox.framework"; sourceTree = "<group>"; };
-		3B1FB42E1D7F2155001A099E /* MBDataEnvironment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBDataEnvironment.framework; path = "../../../../../../Library/Developer/Xcode/DerivedData/Gilt-ertfwablfdbghreppztdbsiiyqli/Build/Products/Release-iphonesimulator/MBDataEnvironment.framework"; sourceTree = "<group>"; };
-		3B8BA87319DB07C500996B9F /* MBDataFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDataFilter.h; sourceTree = "<group>"; };
-		3B8BA87419DB07C500996B9F /* MBDataFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDataFilter.m; sourceTree = "<group>"; };
-		3B8BA87519DB07C500996B9F /* MBFilterDataAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFilterDataAction.h; sourceTree = "<group>"; };
-		3B8BA87619DB07C500996B9F /* MBFilterDataAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFilterDataAction.m; sourceTree = "<group>"; };
-		3B8BA87719DB07C500996B9F /* MBFilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFilterManager.h; sourceTree = "<group>"; };
-		3B8BA87819DB07C500996B9F /* MBFilterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFilterManager.m; sourceTree = "<group>"; };
-		3B8BA87A19DB07C500996B9F /* MBEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventListener.h; sourceTree = "<group>"; };
-		3B8BA87B19DB07C500996B9F /* MBEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventListener.m; sourceTree = "<group>"; };
-		3B8BA87C19DB07C500996B9F /* MBListenerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBListenerManager.h; sourceTree = "<group>"; };
-		3B8BA87D19DB07C500996B9F /* MBListenerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBListenerManager.m; sourceTree = "<group>"; };
-		3B8BA87F19DB07C500996B9F /* EnvironmentActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentActions.h; sourceTree = "<group>"; };
-		3B8BA88019DB07C500996B9F /* EnvironmentActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentActions.m; sourceTree = "<group>"; };
-		3B8BA88119DB07C500996B9F /* EventActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventActions.h; sourceTree = "<group>"; };
-		3B8BA88219DB07C500996B9F /* EventActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventActions.m; sourceTree = "<group>"; };
-		3B8BA88319DB07C500996B9F /* ExpressionCacheActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionCacheActions.h; sourceTree = "<group>"; };
-		3B8BA88419DB07C500996B9F /* ExpressionCacheActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionCacheActions.m; sourceTree = "<group>"; };
-		3B8BA88519DB07C500996B9F /* FileActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileActions.h; sourceTree = "<group>"; };
-		3B8BA88619DB07C500996B9F /* FileActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileActions.m; sourceTree = "<group>"; };
-		3B8BA88719DB07C500996B9F /* FlowControlActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowControlActions.h; sourceTree = "<group>"; };
-		3B8BA88819DB07C500996B9F /* FlowControlActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowControlActions.m; sourceTree = "<group>"; };
-		3B8BA88919DB07C500996B9F /* ServiceActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceActions.h; sourceTree = "<group>"; };
-		3B8BA88A19DB07C500996B9F /* ServiceActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceActions.m; sourceTree = "<group>"; };
-		3B8BA88B19DB07C500996B9F /* VariableActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableActions.h; sourceTree = "<group>"; };
-		3B8BA88C19DB07C500996B9F /* VariableActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VariableActions.m; sourceTree = "<group>"; };
-		3B8BA88D19DB07C500996B9F /* MBEventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandling.h; sourceTree = "<group>"; };
-		3B8BA88F19DB07C500996B9F /* MBEventHandlingModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandlingModule.h; sourceTree = "<group>"; };
-		3B8BA89019DB07C500996B9F /* MBEventHandlingModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingModule.m; sourceTree = "<group>"; };
-		3B8BA89119DB07C500996B9F /* MBEventHandlingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandlingConstants.h; sourceTree = "<group>"; };
-		3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingConstants.m; sourceTree = "<group>"; };
-		3BB166A61D8C6BB70004A0E9 /* MBDataEnvironment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBDataEnvironment.framework; path = "Carthage/Checkouts/MBDataEnvironment/build/Debug-iphoneos/MBDataEnvironment.framework"; sourceTree = "<group>"; };
-		3BB166A81D8C6BBD0004A0E9 /* RaptureXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RaptureXML.framework; path = "../../../../Library/Developer/Xcode/DerivedData/MBEventHandling-abmfjfenfdrtzzeepnsfqrizgcyf/Build/Products/Release-iphonesimulator/RaptureXML.framework"; sourceTree = "<group>"; };
-		3BB166AA1D8C6BC30004A0E9 /* MBToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBToolbox.framework; path = "Carthage/Checkouts/MBToolbox/build/Debug-iphoneos/MBToolbox.framework"; sourceTree = "<group>"; };
-		3BB7922C1A82A4D800A99387 /* MBEventHandling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBEventHandling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BB792361A82A4D800A99387 /* MBEventHandlingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBEventHandlingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BEA9C441D7F6DA500A87B4C /* MBDataEnvironment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBDataEnvironment.framework; path = "Carthage/Checkouts/MBDataEnvironment/build/Debug-iphoneos/MBDataEnvironment.framework"; sourceTree = "<group>"; };
-		3BEA9C451D7F6DA500A87B4C /* MBToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBToolbox.framework; path = "Carthage/Checkouts/MBToolbox/build/Debug-iphoneos/MBToolbox.framework"; sourceTree = "<group>"; };
-		3BEA9C461D7F6DA500A87B4C /* RaptureXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RaptureXML.framework; path = "Carthage/Checkouts/RaptureXML/build/Debug-iphoneos/RaptureXML.framework"; sourceTree = "<group>"; };
-		EC333028AB3230B662723DBE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9059031DAECB5200B4EEC0 /* MBEventHandling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBEventHandling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B90590C1DAECB5200B4EEC0 /* MBEventHandlingUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBEventHandlingUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9059251DAECB9E00B4EEC0 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		3B9059261DAECB9E00B4EEC0 /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
+		3B9059271DAECB9E00B4EEC0 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		3B9059281DAECB9E00B4EEC0 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		3B9059291DAECB9E00B4EEC0 /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
+		3B90592B1DAECD9800B4EEC0 /* Info-Framework.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Framework.plist"; sourceTree = "<group>"; };
+		3B90592C1DAECD9800B4EEC0 /* Info-Tests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-Tests.plist"; sourceTree = "<group>"; };
+		3BEF0FAE1E966B1000067E4C /* MBDataFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBDataFilter.h; sourceTree = "<group>"; };
+		3BEF0FAF1E966B1000067E4C /* MBDataFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBDataFilter.m; sourceTree = "<group>"; };
+		3BEF0FB01E966B1000067E4C /* MBFilterDataAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFilterDataAction.h; sourceTree = "<group>"; };
+		3BEF0FB11E966B1000067E4C /* MBFilterDataAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFilterDataAction.m; sourceTree = "<group>"; };
+		3BEF0FB21E966B1000067E4C /* MBFilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFilterManager.h; sourceTree = "<group>"; };
+		3BEF0FB31E966B1000067E4C /* MBFilterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFilterManager.m; sourceTree = "<group>"; };
+		3BEF0FB51E966B1000067E4C /* MBEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventListener.h; sourceTree = "<group>"; };
+		3BEF0FB61E966B1000067E4C /* MBEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventListener.m; sourceTree = "<group>"; };
+		3BEF0FB71E966B1000067E4C /* MBListenerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBListenerManager.h; sourceTree = "<group>"; };
+		3BEF0FB81E966B1000067E4C /* MBListenerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBListenerManager.m; sourceTree = "<group>"; };
+		3BEF0FBA1E966B1000067E4C /* EnvironmentActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnvironmentActions.h; sourceTree = "<group>"; };
+		3BEF0FBB1E966B1000067E4C /* EnvironmentActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvironmentActions.m; sourceTree = "<group>"; };
+		3BEF0FBC1E966B1000067E4C /* EventActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventActions.h; sourceTree = "<group>"; };
+		3BEF0FBD1E966B1000067E4C /* EventActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventActions.m; sourceTree = "<group>"; };
+		3BEF0FBE1E966B1000067E4C /* ExpressionCacheActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressionCacheActions.h; sourceTree = "<group>"; };
+		3BEF0FBF1E966B1000067E4C /* ExpressionCacheActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressionCacheActions.m; sourceTree = "<group>"; };
+		3BEF0FC01E966B1000067E4C /* FileActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileActions.h; sourceTree = "<group>"; };
+		3BEF0FC11E966B1000067E4C /* FileActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileActions.m; sourceTree = "<group>"; };
+		3BEF0FC21E966B1000067E4C /* FlowControlActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowControlActions.h; sourceTree = "<group>"; };
+		3BEF0FC31E966B1000067E4C /* FlowControlActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowControlActions.m; sourceTree = "<group>"; };
+		3BEF0FC41E966B1000067E4C /* ServiceActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceActions.h; sourceTree = "<group>"; };
+		3BEF0FC51E966B1000067E4C /* ServiceActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceActions.m; sourceTree = "<group>"; };
+		3BEF0FC61E966B1000067E4C /* VariableActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VariableActions.h; sourceTree = "<group>"; };
+		3BEF0FC71E966B1000067E4C /* VariableActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VariableActions.m; sourceTree = "<group>"; };
+		3BEF0FC81E966B1000067E4C /* MBEventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandling.h; sourceTree = "<group>"; };
+		3BEF0FCA1E966B1000067E4C /* MBEventHandlingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandlingConstants.h; sourceTree = "<group>"; };
+		3BEF0FCB1E966B1000067E4C /* MBEventHandlingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingConstants.m; sourceTree = "<group>"; };
+		3BEF0FCC1E966B1000067E4C /* MBEventHandlingModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBEventHandlingModule.h; sourceTree = "<group>"; };
+		3BEF0FCD1E966B1000067E4C /* MBEventHandlingModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingModule.m; sourceTree = "<group>"; };
+		3BEF0FEE1E966B1D00067E4C /* MBEventHandlingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBEventHandlingTests.m; sourceTree = "<group>"; };
+		3BEF0FF11E966DE500067E4C /* MBDataEnvironment.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBDataEnvironment.framework; path = Carthage/Checkouts/MBDataEnvironment/build/Debug/MBDataEnvironment.framework; sourceTree = "<group>"; };
+		3BEF0FF21E966DE500067E4C /* MBToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBToolbox.framework; path = Carthage/Checkouts/MBToolbox/build/Debug/MBToolbox.framework; sourceTree = "<group>"; };
+		3BEF0FF31E966DE500067E4C /* RaptureXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RaptureXML.framework; path = Carthage/Checkouts/RaptureXML/build/Debug/RaptureXML.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3BB792281A82A4D800A99387 /* Frameworks */ = {
+		3B9058FF1DAECB5200B4EEC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BEA9C471D7F6DA500A87B4C /* MBDataEnvironment.framework in Frameworks */,
-				3BEA9C481D7F6DA500A87B4C /* MBToolbox.framework in Frameworks */,
-				3BEA9C491D7F6DA500A87B4C /* RaptureXML.framework in Frameworks */,
+				3BEF0FF41E966DE500067E4C /* MBDataEnvironment.framework in Frameworks */,
+				3BEF0FF51E966DE500067E4C /* MBToolbox.framework in Frameworks */,
+				3BEF0FF61E966DE500067E4C /* RaptureXML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BB792331A82A4D800A99387 /* Frameworks */ = {
+		3B9059091DAECB5200B4EEC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB166AB1D8C6BC30004A0E9 /* MBToolbox.framework in Frameworks */,
-				3BB166A91D8C6BBD0004A0E9 /* RaptureXML.framework in Frameworks */,
-				3BB166A71D8C6BB70004A0E9 /* MBDataEnvironment.framework in Frameworks */,
-				3BB792371A82A4D800A99387 /* MBEventHandling.framework in Frameworks */,
+				3B90590D1DAECB5200B4EEC0 /* MBEventHandling.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		30ED4FAC3C12CF8874309D0D /* Frameworks */ = {
+		3B9058F91DAECB5200B4EEC0 = {
 			isa = PBXGroup;
 			children = (
-				3BB166AA1D8C6BC30004A0E9 /* MBToolbox.framework */,
-				3BB166A81D8C6BBD0004A0E9 /* RaptureXML.framework */,
-				3BB166A61D8C6BB70004A0E9 /* MBDataEnvironment.framework */,
-				3BEA9C441D7F6DA500A87B4C /* MBDataEnvironment.framework */,
-				3BEA9C451D7F6DA500A87B4C /* MBToolbox.framework */,
-				3BEA9C461D7F6DA500A87B4C /* RaptureXML.framework */,
-				3B1FB42E1D7F2155001A099E /* MBDataEnvironment.framework */,
-				3B1FB42C1D7F214C001A099E /* MBToolbox.framework */,
-				3B0A97231A829E0B00D26D73 /* libPods.a */,
-				EC333028AB3230B662723DBE /* Pods.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3B0A97441A829F9A00D26D73 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				3B0A97451A829F9A00D26D73 /* MBEventHandlingTests.m */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		3B8BA80419DA08DF00996B9F = {
-			isa = PBXGroup;
-			children = (
-				3B8BA87119DB07C500996B9F /* Code */,
-				3B0A97441A829F9A00D26D73 /* Tests */,
-				3B8BA80E19DA08DF00996B9F /* Products */,
-				30ED4FAC3C12CF8874309D0D /* Frameworks */,
+				3BEF0FAC1E966B1000067E4C /* Sources */,
+				3BEF0FED1E966B1D00067E4C /* Tests */,
+				3B90591D1DAECB9E00B4EEC0 /* BuildControl */,
+				3B9059041DAECB5200B4EEC0 /* Products */,
+				3BEF0FF01E966DE500067E4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		3B8BA80E19DA08DF00996B9F /* Products */ = {
+		3B9059041DAECB5200B4EEC0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3BB7922C1A82A4D800A99387 /* MBEventHandling.framework */,
-				3BB792361A82A4D800A99387 /* MBEventHandlingTests.xctest */,
+				3B9059031DAECB5200B4EEC0 /* MBEventHandling.framework */,
+				3B90590C1DAECB5200B4EEC0 /* MBEventHandlingUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B8BA87119DB07C500996B9F /* Code */ = {
+		3B90591D1DAECB9E00B4EEC0 /* BuildControl */ = {
 			isa = PBXGroup;
 			children = (
-				3B8BA88D19DB07C500996B9F /* MBEventHandling.h */,
-				3B8BA87219DB07C500996B9F /* DataFilter */,
-				3B8BA87919DB07C500996B9F /* EventListener */,
-				3B8BA87E19DB07C500996B9F /* ListenerActions */,
-				3B8BA88E19DB07C500996B9F /* Module */,
+				3B9059241DAECB9E00B4EEC0 /* config */,
+				3B90592B1DAECD9800B4EEC0 /* Info-Framework.plist */,
+				3B90592C1DAECD9800B4EEC0 /* Info-Tests.plist */,
 			);
-			path = Code;
+			path = BuildControl;
 			sourceTree = "<group>";
 		};
-		3B8BA87219DB07C500996B9F /* DataFilter */ = {
+		3B9059241DAECB9E00B4EEC0 /* config */ = {
 			isa = PBXGroup;
 			children = (
-				3B8BA87319DB07C500996B9F /* MBDataFilter.h */,
-				3B8BA87419DB07C500996B9F /* MBDataFilter.m */,
-				3B8BA87519DB07C500996B9F /* MBFilterDataAction.h */,
-				3B8BA87619DB07C500996B9F /* MBFilterDataAction.m */,
-				3B8BA87719DB07C500996B9F /* MBFilterManager.h */,
-				3B8BA87819DB07C500996B9F /* MBFilterManager.m */,
+				3B9059251DAECB9E00B4EEC0 /* Debug.xcconfig */,
+				3B9059261DAECB9E00B4EEC0 /* Framework.xcconfig */,
+				3B9059271DAECB9E00B4EEC0 /* Project.xcconfig */,
+				3B9059281DAECB9E00B4EEC0 /* Release.xcconfig */,
+				3B9059291DAECB9E00B4EEC0 /* Tests.xcconfig */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		3BEF0FAC1E966B1000067E4C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3BEF0FC81E966B1000067E4C /* MBEventHandling.h */,
+				3BEF0FAD1E966B1000067E4C /* DataFilter */,
+				3BEF0FB41E966B1000067E4C /* EventListener */,
+				3BEF0FB91E966B1000067E4C /* ListenerActions */,
+				3BEF0FC91E966B1000067E4C /* Module */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3BEF0FAD1E966B1000067E4C /* DataFilter */ = {
+			isa = PBXGroup;
+			children = (
+				3BEF0FAE1E966B1000067E4C /* MBDataFilter.h */,
+				3BEF0FAF1E966B1000067E4C /* MBDataFilter.m */,
+				3BEF0FB01E966B1000067E4C /* MBFilterDataAction.h */,
+				3BEF0FB11E966B1000067E4C /* MBFilterDataAction.m */,
+				3BEF0FB21E966B1000067E4C /* MBFilterManager.h */,
+				3BEF0FB31E966B1000067E4C /* MBFilterManager.m */,
 			);
 			path = DataFilter;
 			sourceTree = "<group>";
 		};
-		3B8BA87919DB07C500996B9F /* EventListener */ = {
+		3BEF0FB41E966B1000067E4C /* EventListener */ = {
 			isa = PBXGroup;
 			children = (
-				3B8BA87A19DB07C500996B9F /* MBEventListener.h */,
-				3B8BA87B19DB07C500996B9F /* MBEventListener.m */,
-				3B8BA87C19DB07C500996B9F /* MBListenerManager.h */,
-				3B8BA87D19DB07C500996B9F /* MBListenerManager.m */,
+				3BEF0FB51E966B1000067E4C /* MBEventListener.h */,
+				3BEF0FB61E966B1000067E4C /* MBEventListener.m */,
+				3BEF0FB71E966B1000067E4C /* MBListenerManager.h */,
+				3BEF0FB81E966B1000067E4C /* MBListenerManager.m */,
 			);
 			path = EventListener;
 			sourceTree = "<group>";
 		};
-		3B8BA87E19DB07C500996B9F /* ListenerActions */ = {
+		3BEF0FB91E966B1000067E4C /* ListenerActions */ = {
 			isa = PBXGroup;
 			children = (
-				3B8BA87F19DB07C500996B9F /* EnvironmentActions.h */,
-				3B8BA88019DB07C500996B9F /* EnvironmentActions.m */,
-				3B8BA88119DB07C500996B9F /* EventActions.h */,
-				3B8BA88219DB07C500996B9F /* EventActions.m */,
-				3B8BA88319DB07C500996B9F /* ExpressionCacheActions.h */,
-				3B8BA88419DB07C500996B9F /* ExpressionCacheActions.m */,
-				3B8BA88519DB07C500996B9F /* FileActions.h */,
-				3B8BA88619DB07C500996B9F /* FileActions.m */,
-				3B8BA88719DB07C500996B9F /* FlowControlActions.h */,
-				3B8BA88819DB07C500996B9F /* FlowControlActions.m */,
-				3B8BA88919DB07C500996B9F /* ServiceActions.h */,
-				3B8BA88A19DB07C500996B9F /* ServiceActions.m */,
-				3B8BA88B19DB07C500996B9F /* VariableActions.h */,
-				3B8BA88C19DB07C500996B9F /* VariableActions.m */,
+				3BEF0FBA1E966B1000067E4C /* EnvironmentActions.h */,
+				3BEF0FBB1E966B1000067E4C /* EnvironmentActions.m */,
+				3BEF0FBC1E966B1000067E4C /* EventActions.h */,
+				3BEF0FBD1E966B1000067E4C /* EventActions.m */,
+				3BEF0FBE1E966B1000067E4C /* ExpressionCacheActions.h */,
+				3BEF0FBF1E966B1000067E4C /* ExpressionCacheActions.m */,
+				3BEF0FC01E966B1000067E4C /* FileActions.h */,
+				3BEF0FC11E966B1000067E4C /* FileActions.m */,
+				3BEF0FC21E966B1000067E4C /* FlowControlActions.h */,
+				3BEF0FC31E966B1000067E4C /* FlowControlActions.m */,
+				3BEF0FC41E966B1000067E4C /* ServiceActions.h */,
+				3BEF0FC51E966B1000067E4C /* ServiceActions.m */,
+				3BEF0FC61E966B1000067E4C /* VariableActions.h */,
+				3BEF0FC71E966B1000067E4C /* VariableActions.m */,
 			);
 			path = ListenerActions;
 			sourceTree = "<group>";
 		};
-		3B8BA88E19DB07C500996B9F /* Module */ = {
+		3BEF0FC91E966B1000067E4C /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				3B8BA88F19DB07C500996B9F /* MBEventHandlingModule.h */,
-				3B8BA89019DB07C500996B9F /* MBEventHandlingModule.m */,
-				3B8BA89119DB07C500996B9F /* MBEventHandlingConstants.h */,
-				3B8BA89219DB07C500996B9F /* MBEventHandlingConstants.m */,
+				3BEF0FCA1E966B1000067E4C /* MBEventHandlingConstants.h */,
+				3BEF0FCB1E966B1000067E4C /* MBEventHandlingConstants.m */,
+				3BEF0FCC1E966B1000067E4C /* MBEventHandlingModule.h */,
+				3BEF0FCD1E966B1000067E4C /* MBEventHandlingModule.m */,
 			);
 			path = Module;
+			sourceTree = "<group>";
+		};
+		3BEF0FED1E966B1D00067E4C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3BEF0FEE1E966B1D00067E4C /* MBEventHandlingTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		3BEF0FF01E966DE500067E4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BEF0FF11E966DE500067E4C /* MBDataEnvironment.framework */,
+				3BEF0FF21E966DE500067E4C /* MBToolbox.framework */,
+				3BEF0FF31E966DE500067E4C /* RaptureXML.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3BB792291A82A4D800A99387 /* Headers */ = {
+		3B9059001DAECB5200B4EEC0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB792451A82A55700A99387 /* MBDataFilter.h in Headers */,
-				3BB792461A82A55700A99387 /* MBFilterDataAction.h in Headers */,
-				3BB792471A82A55700A99387 /* MBFilterManager.h in Headers */,
-				3BB792481A82A55700A99387 /* MBEventListener.h in Headers */,
-				3BB792491A82A55700A99387 /* MBListenerManager.h in Headers */,
-				3BB7924A1A82A55700A99387 /* EnvironmentActions.h in Headers */,
-				3BB7924B1A82A55700A99387 /* EventActions.h in Headers */,
-				3BB7924C1A82A55700A99387 /* ExpressionCacheActions.h in Headers */,
-				3BB7924D1A82A55700A99387 /* FileActions.h in Headers */,
-				3BB7924E1A82A55700A99387 /* FlowControlActions.h in Headers */,
-				3BB7924F1A82A55700A99387 /* ServiceActions.h in Headers */,
-				3BB792501A82A55700A99387 /* VariableActions.h in Headers */,
-				3BB792511A82A55700A99387 /* MBEventHandling.h in Headers */,
-				3BB792521A82A55700A99387 /* MBEventHandlingModule.h in Headers */,
-				3BB792531A82A55700A99387 /* MBEventHandlingConstants.h in Headers */,
+				3BEF0FEA1E966B1000067E4C /* MBEventHandlingModule.h in Headers */,
+				3BEF0FCF1E966B1000067E4C /* MBDataFilter.h in Headers */,
+				3BEF0FD71E966B1000067E4C /* MBListenerManager.h in Headers */,
+				3BEF0FDB1E966B1000067E4C /* EventActions.h in Headers */,
+				3BEF0FDD1E966B1000067E4C /* ExpressionCacheActions.h in Headers */,
+				3BEF0FD91E966B1000067E4C /* EnvironmentActions.h in Headers */,
+				3BEF0FDF1E966B1000067E4C /* FileActions.h in Headers */,
+				3BEF0FE51E966B1000067E4C /* VariableActions.h in Headers */,
+				3BEF0FE81E966B1000067E4C /* MBEventHandlingConstants.h in Headers */,
+				3BEF0FE31E966B1000067E4C /* ServiceActions.h in Headers */,
+				3BEF0FE71E966B1000067E4C /* MBEventHandling.h in Headers */,
+				3BEF0FD31E966B1000067E4C /* MBFilterManager.h in Headers */,
+				3BEF0FD51E966B1000067E4C /* MBEventListener.h in Headers */,
+				3BEF0FE11E966B1000067E4C /* FlowControlActions.h in Headers */,
+				3BEF0FD11E966B1000067E4C /* MBFilterDataAction.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3BB7922B1A82A4D800A99387 /* MBEventHandling */ = {
+		3B9059021DAECB5200B4EEC0 /* MBEventHandling */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BB7923F1A82A4D800A99387 /* Build configuration list for PBXNativeTarget "MBEventHandling" */;
+			buildConfigurationList = 3B9059171DAECB5200B4EEC0 /* Build configuration list for PBXNativeTarget "MBEventHandling" */;
 			buildPhases = (
-				3BB792271A82A4D800A99387 /* Sources */,
-				3BB792281A82A4D800A99387 /* Frameworks */,
-				3BB792291A82A4D800A99387 /* Headers */,
-				3BB7922A1A82A4D800A99387 /* Resources */,
+				3B9058FE1DAECB5200B4EEC0 /* Sources */,
+				3B9058FF1DAECB5200B4EEC0 /* Frameworks */,
+				3B9059001DAECB5200B4EEC0 /* Headers */,
+				3B9059011DAECB5200B4EEC0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -295,75 +291,76 @@
 			);
 			name = MBEventHandling;
 			productName = MBEventHandling;
-			productReference = 3BB7922C1A82A4D800A99387 /* MBEventHandling.framework */;
+			productReference = 3B9059031DAECB5200B4EEC0 /* MBEventHandling.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3BB792351A82A4D800A99387 /* MBEventHandlingTests */ = {
+		3B90590B1DAECB5200B4EEC0 /* MBEventHandlingUnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BB792421A82A4D800A99387 /* Build configuration list for PBXNativeTarget "MBEventHandlingTests" */;
+			buildConfigurationList = 3B90591A1DAECB5200B4EEC0 /* Build configuration list for PBXNativeTarget "MBEventHandlingUnitTests" */;
 			buildPhases = (
-				3BB792321A82A4D800A99387 /* Sources */,
-				3BB792331A82A4D800A99387 /* Frameworks */,
-				3BB792341A82A4D800A99387 /* Resources */,
+				3B9059081DAECB5200B4EEC0 /* Sources */,
+				3B9059091DAECB5200B4EEC0 /* Frameworks */,
+				3B90590A1DAECB5200B4EEC0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3BB792391A82A4D800A99387 /* PBXTargetDependency */,
+				3B90590F1DAECB5200B4EEC0 /* PBXTargetDependency */,
 			);
-			name = MBEventHandlingTests;
-			productName = MBEventHandlingTests;
-			productReference = 3BB792361A82A4D800A99387 /* MBEventHandlingTests.xctest */;
+			name = MBEventHandlingUnitTests;
+			productName = MBEventHandlingUnitTests;
+			productReference = 3B90590C1DAECB5200B4EEC0 /* MBEventHandlingUnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3B8BA80519DA08DF00996B9F /* Project object */ = {
+		3B9058FA1DAECB5200B4EEC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Gilt Groupe";
 				TargetAttributes = {
-					3B0A971F1A829BE700D26D73 = {
-						CreatedOnToolsVersion = 6.1.1;
+					3B9059021DAECB5200B4EEC0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MTP6A36P8K;
+						ProvisioningStyle = Automatic;
 					};
-					3BB7922B1A82A4D800A99387 = {
-						CreatedOnToolsVersion = 6.1.1;
-					};
-					3BB792351A82A4D800A99387 = {
-						CreatedOnToolsVersion = 6.1.1;
+					3B90590B1DAECB5200B4EEC0 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MTP6A36P8K;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 3B8BA80819DA08DF00996B9F /* Build configuration list for PBXProject "MBEventHandling" */;
+			buildConfigurationList = 3B9058FD1DAECB5200B4EEC0 /* Build configuration list for PBXProject "MBEventHandling" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 3B8BA80419DA08DF00996B9F;
-			productRefGroup = 3B8BA80E19DA08DF00996B9F /* Products */;
+			mainGroup = 3B9058F91DAECB5200B4EEC0;
+			productRefGroup = 3B9059041DAECB5200B4EEC0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3BB7922B1A82A4D800A99387 /* MBEventHandling */,
-				3BB792351A82A4D800A99387 /* MBEventHandlingTests */,
-				3B0A971F1A829BE700D26D73 /* MBEventHandlingDocumentation */,
+				3B9059021DAECB5200B4EEC0 /* MBEventHandling */,
+				3B90590B1DAECB5200B4EEC0 /* MBEventHandlingUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3BB7922A1A82A4D800A99387 /* Resources */ = {
+		3B9059011DAECB5200B4EEC0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BB792341A82A4D800A99387 /* Resources */ = {
+		3B90590A1DAECB5200B4EEC0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,81 +369,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		3BB792631A82A7DA00A99387 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "$PROJECT_DIR/Pods/MBToolbox/BuildControl/public/buildMockingbirdDocumentation.sh --module \"Event Handling Module\"";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		3BB792271A82A4D800A99387 /* Sources */ = {
+		3B9058FE1DAECB5200B4EEC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB792541A82A58100A99387 /* MBDataFilter.m in Sources */,
-				3BB792551A82A58100A99387 /* MBFilterDataAction.m in Sources */,
-				3BB792561A82A58100A99387 /* MBFilterManager.m in Sources */,
-				3BB792571A82A58100A99387 /* MBEventListener.m in Sources */,
-				3BB792581A82A58100A99387 /* MBListenerManager.m in Sources */,
-				3BB792591A82A58100A99387 /* EnvironmentActions.m in Sources */,
-				3BB7925A1A82A58100A99387 /* EventActions.m in Sources */,
-				3BB7925B1A82A58100A99387 /* ExpressionCacheActions.m in Sources */,
-				3BB7925C1A82A58100A99387 /* FileActions.m in Sources */,
-				3BB7925D1A82A58100A99387 /* FlowControlActions.m in Sources */,
-				3BB7925E1A82A58100A99387 /* ServiceActions.m in Sources */,
-				3BB7925F1A82A58100A99387 /* VariableActions.m in Sources */,
-				3BB792601A82A58100A99387 /* MBEventHandlingModule.m in Sources */,
-				3BB792611A82A58100A99387 /* MBEventHandlingConstants.m in Sources */,
+				3BEF0FEB1E966B1000067E4C /* MBEventHandlingModule.m in Sources */,
+				3BEF0FD41E966B1000067E4C /* MBFilterManager.m in Sources */,
+				3BEF0FD01E966B1000067E4C /* MBDataFilter.m in Sources */,
+				3BEF0FD61E966B1000067E4C /* MBEventListener.m in Sources */,
+				3BEF0FE91E966B1000067E4C /* MBEventHandlingConstants.m in Sources */,
+				3BEF0FDC1E966B1000067E4C /* EventActions.m in Sources */,
+				3BEF0FE61E966B1000067E4C /* VariableActions.m in Sources */,
+				3BEF0FE41E966B1000067E4C /* ServiceActions.m in Sources */,
+				3BEF0FE21E966B1000067E4C /* FlowControlActions.m in Sources */,
+				3BEF0FDA1E966B1000067E4C /* EnvironmentActions.m in Sources */,
+				3BEF0FD81E966B1000067E4C /* MBListenerManager.m in Sources */,
+				3BEF0FD21E966B1000067E4C /* MBFilterDataAction.m in Sources */,
+				3BEF0FDE1E966B1000067E4C /* ExpressionCacheActions.m in Sources */,
+				3BEF0FE01E966B1000067E4C /* FileActions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BB792321A82A4D800A99387 /* Sources */ = {
+		3B9059081DAECB5200B4EEC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB792621A82A5AF00A99387 /* MBEventHandlingTests.m in Sources */,
+				3BEF0FEF1E966B1D00067E4C /* MBEventHandlingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3BB792391A82A4D800A99387 /* PBXTargetDependency */ = {
+		3B90590F1DAECB5200B4EEC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3BB7922B1A82A4D800A99387 /* MBEventHandling */;
-			targetProxy = 3BB792381A82A4D800A99387 /* PBXContainerItemProxy */;
+			target = 3B9059021DAECB5200B4EEC0 /* MBEventHandling */;
+			targetProxy = 3B90590E1DAECB5200B4EEC0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3B0A97211A829BE700D26D73 /* Debug */ = {
+		3B9059151DAECB5200B4EEC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9059271DAECB9E00B4EEC0 /* Project.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		3B0A97221A829BE700D26D73 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		3B8BA81C19DA08DF00996B9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -454,15 +423,19 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -473,24 +446,27 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		3B8BA81D19DA08DF00996B9F /* Release */ = {
+		3B9059161DAECB5200B4EEC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9059271DAECB9E00B4EEC0 /* Project.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -498,15 +474,19 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -517,143 +497,90 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		3BB792401A82A4D800A99387 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(BUILT_PRODUCTS_DIR)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BuildControl/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gilt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3BB792411A82A4D800A99387 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(BUILT_PRODUCTS_DIR)",
-				);
-				INFOPLIST_FILE = "BuildControl/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gilt.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		3BB792431A82A4D800A99387 /* Debug */ = {
+		3B9059181DAECB5200B4EEC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9059251DAECB9E00B4EEC0 /* Debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gilt.tests.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		3BB792441A82A4D800A99387 /* Release */ = {
+		3B9059191DAECB5200B4EEC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9059281DAECB9E00B4EEC0 /* Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				INFOPLIST_FILE = "BuildControl/Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gilt.tests.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3B90591B1DAECB5200B4EEC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9059291DAECB9E00B4EEC0 /* Tests.xcconfig */;
+			buildSettings = {
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3B90591C1DAECB5200B4EEC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B9059291DAECB9E00B4EEC0 /* Tests.xcconfig */;
+			buildSettings = {
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B0A97201A829BE700D26D73 /* Build configuration list for PBXAggregateTarget "MBEventHandlingDocumentation" */ = {
+		3B9058FD1DAECB5200B4EEC0 /* Build configuration list for PBXProject "MBEventHandling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B0A97211A829BE700D26D73 /* Debug */,
-				3B0A97221A829BE700D26D73 /* Release */,
+				3B9059151DAECB5200B4EEC0 /* Debug */,
+				3B9059161DAECB5200B4EEC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B8BA80819DA08DF00996B9F /* Build configuration list for PBXProject "MBEventHandling" */ = {
+		3B9059171DAECB5200B4EEC0 /* Build configuration list for PBXNativeTarget "MBEventHandling" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B8BA81C19DA08DF00996B9F /* Debug */,
-				3B8BA81D19DA08DF00996B9F /* Release */,
+				3B9059181DAECB5200B4EEC0 /* Debug */,
+				3B9059191DAECB5200B4EEC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BB7923F1A82A4D800A99387 /* Build configuration list for PBXNativeTarget "MBEventHandling" */ = {
+		3B90591A1DAECB5200B4EEC0 /* Build configuration list for PBXNativeTarget "MBEventHandlingUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BB792401A82A4D800A99387 /* Debug */,
-				3BB792411A82A4D800A99387 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3BB792421A82A4D800A99387 /* Build configuration list for PBXNativeTarget "MBEventHandlingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3BB792431A82A4D800A99387 /* Debug */,
-				3BB792441A82A4D800A99387 /* Release */,
+				3B90591B1DAECB5200B4EEC0 /* Debug */,
+				3B90591C1DAECB5200B4EEC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3B8BA80519DA08DF00996B9F /* Project object */;
+	rootObject = 3B9058FA1DAECB5200B4EEC0 /* Project object */;
 }
