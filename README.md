@@ -43,10 +43,10 @@ Then, use the `carthage` command to [update your dependencies](https://github.co
 
 Finally, you’ll need to [integrate MBEventHandling into your project](https://github.com/emaloney/MBEventHandling/blob/master/INTEGRATION.md) in order to use [the API](https://rawgit.com/emaloney/MBEventHandling/master/Documentation/API/index.html) it provides.
 
-Once successfully integrated, just add the following `import` statement to any Swift file where you want to use MBEventHandling:
+Once successfully integrated, just add the following statement to any Objective-C file where you want to use MBEventHandling:
 
-```swift
-import MBEventHandling
+```objc
+@import MBEventHandling;
 ```
 
 See [the Integration document](https://github.com/emaloney/MBEventHandling/blob/master/INTEGRATION.md) for additional details on integrating MBEventHandling into your project.
