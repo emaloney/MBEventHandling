@@ -1,6 +1,11 @@
 language: objective-c
 xcode_workspace: MBEventHandling.xcworkspace
-osx_image: xcode8.3
+os: osx
+osx_image: xcode9
+
+branches:
+  only:
+    - master
 
 git:
   depth: 1
@@ -35,4 +40,3 @@ after_failure:
   - test -f "MBEventHandling-tvOS-test.log" && tail -n 2500 "MBEventHandling-tvOS-test.log"
   - test -f "MBEventHandling-tvOS-test.log" && LINE_BEFORE=`cat "MBEventHandling-tvOS-test.log" | grep -n "IDETestOperationsObserverDebug. Writing diagnostic log for test session to." | awk -F':' '{print $1}'` && LINE=`expr $LINE_BEFORE + 1` && LOG_FILE=`head -n $LINE "MBEventHandling-tvOS-test.log" | tail -n 1` && cat "$LOG_FILE"
   - test -f "MBEventHandling-watchOS-build.log" && tail -n 2500 "MBEventHandling-watchOS-build.log"
-
